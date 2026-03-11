@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #E8712A;
+  --primary-dark: #c95d1e;
+  --primary-light: #F4A235;
+  --accent: #2a6bb5;
+  --accent-dark: #1e5a9e;
+  --bg-light: #fdf8f4;
+  --bg-white: #ffffff;
+  --text-dark: #1e1e1e;
+  --text-gray: #666666;
+  --text-light: #999999;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
+  --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
+  --color-bg-light: var(--bg-light);
+  --color-text-dark: var(--text-dark);
+  --color-text-gray: var(--text-gray);
+  --color-text-light: var(--text-light);
+}
+
+body {
+  font-family: "Noto Sans KR", "Pretendard", -apple-system, sans-serif;
+  color: var(--text-dark);
+  background: var(--bg-white);
+}
+
+/* Swiper custom */
+.hero-swiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+.hero-swiper .swiper-pagination-bullet-active {
+  background: var(--accent);
+}
+
+/* 기본 Swiper 화살표 숨김 - 커스텀 컨트롤 사용 */
+.hero-swiper .swiper-button-next,
+.hero-swiper .swiper-button-prev {
+  display: none;
+}
+
+/* Scroll animation base */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Sub-page header */
+.page-banner {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, #8B3A0F 100%);
+}

@@ -1,0 +1,18 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F4A235"/>
+      <stop offset="100%" stop-color="#E8712A"/>
+    </linearGradient>
+  </defs>
+  <!-- 메인 사각형 (둥근) -->
+  <rect x="8" y="6" width="32" height="36" rx="8" fill="url(#logoGrad)"/>
+  <!-- 왼쪽 삼각 돌출 -->
+  <path d="M8 16L0 22V26L8 32V16Z" fill="url(#logoGrad)"/>
+  <!-- 원형 렌즈 (큰) -->
+  <circle cx="28" cy="18" r="5" fill="white"/>
+  <!-- 원형 렌즈 (작은) -->
+  <circle cx="16" cy="18" r="3" fill="white"/>
+  <!-- 하단 바 -->
+  <rect x="14" y="30" width="20" height="4" rx="2" fill="white" opacity="0.8"/>
+</svg>
