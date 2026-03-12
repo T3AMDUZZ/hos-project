@@ -140,8 +140,8 @@ export default function FullpageHome() {
         <section id="hero" className="h-screen relative">
           <HeroSlider />
           {/* 퀵메뉴 - 히어로 하단 */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 w-full max-w-6xl px-4">
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl grid grid-cols-3 md:grid-cols-6 divide-x divide-gray-100">
+          <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-20 w-full max-w-6xl px-4">
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl grid grid-cols-3 divide-x divide-y divide-gray-100">
               {[
                 { icon: "📋", title: "종합검진", desc: "A/B/C형 맞춤", href: "/checkup/comprehensive" },
                 { icon: "🏥", title: "국가검진", desc: "건강보험공단", href: "/checkup/national" },

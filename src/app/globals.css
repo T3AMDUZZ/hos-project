@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #E8712A;
-  --primary-dark: #c95d1e;
-  --primary-light: #F4A235;
-  --accent: #2a6bb5;
-  --accent-dark: #1e5a9e;
-  --bg-light: #fdf8f4;
+  --primary: #FFCC99;
+  --primary-dark: #F0B880;
+  --primary-light: #FFE0C4;
+  --secondary: #FFE8D6;
+  --accent: #5a9bc4;
+  --accent-dark: #4a8ab5;
+  --bg-light: #FFF7F1;
   --bg-white: #ffffff;
   --text-dark: #1e1e1e;
   --text-gray: #666666;
@@ -17,6 +18,7 @@
   --color-primary: var(--primary);
   --color-primary-dark: var(--primary-dark);
   --color-primary-light: var(--primary-light);
+  --color-secondary: var(--secondary);
   --color-accent: var(--accent);
   --color-accent-dark: var(--accent-dark);
   --color-bg-light: var(--bg-light);
@@ -28,7 +30,7 @@
 body {
   font-family: "Noto Sans KR", "Pretendard", -apple-system, sans-serif;
   color: var(--text-dark);
-  background: var(--bg-white);
+  background: var(--bg-light);
 }
 
 /* Swiper custom */
@@ -63,5 +65,5 @@ body {
 
 /* Sub-page header */
 .page-banner {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, #8B3A0F 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, #E0A870 100%);
 }

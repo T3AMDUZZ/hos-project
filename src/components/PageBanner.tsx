@@ -7,7 +7,7 @@ interface PageBannerProps {
 
 export default function PageBanner({ title, breadcrumb }: PageBannerProps) {
   return (
-    <div className="page-banner pt-20">
+    <div className="page-banner pt-24">
       <div className="max-w-7xl mx-auto px-4 py-16 md:py-20">
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
           {title}
