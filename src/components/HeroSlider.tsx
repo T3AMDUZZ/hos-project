@@ -9,27 +9,28 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import Link from "next/link";
 
+/* Primary #FFCC99 */
 const slides = [
   {
     title: "정밀한 진단, 따뜻한 진료",
     subtitle: "대전 성모영상의학과 종합검진센터",
     description: "최신 의료장비와 풍부한 경험으로 정확한 진단을 약속합니다",
     cta: { text: "검진 상담", href: "/checkup/comprehensive" },
-    bg: "from-[#E8712A] via-[#c95d1e] to-[#8B3A0F]",
+    bg: "from-[#FFCC99] via-[#F0B880] to-[#E0A870]",
   },
   {
     title: "종합건강검진",
     subtitle: "A형 / B형 / C형 맞춤 검진 프로그램",
     description: "개인의 건강 상태에 맞는 최적의 검진 프로그램을 제공합니다",
     cta: { text: "검진 안내", href: "/checkup/comprehensive" },
-    bg: "from-[#F4A235] via-[#E8712A] to-[#a34c1a]",
+    bg: "from-[#FFE8D6] via-[#FFCC99] to-[#F0B880]",
   },
   {
     title: "국가건강검진 / 5대암검진",
     subtitle: "국민건강보험공단 지정 검진기관",
     description: "국가에서 지원하는 건강검진을 편리하게 받으실 수 있습니다",
     cta: { text: "자세히 보기", href: "/checkup/national" },
-    bg: "from-[#c95d1e] via-[#8B3A0F] to-[#5c2508]",
+    bg: "from-[#F0B880] via-[#E0A870] to-[#D09860]",
   },
 ];
 
