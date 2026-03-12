@@ -101,11 +101,11 @@ export default function Header() {
 
   const headerBg = isHome
     ? isDarkSection
-      ? "bg-transparent h-20"
-      : "bg-white/95 backdrop-blur-sm shadow-sm h-20"
+      ? "bg-transparent h-24"
+      : "bg-white/95 backdrop-blur-sm shadow-sm h-24"
     : scrolled
-    ? "bg-white shadow-md h-16"
-    : "bg-white/95 backdrop-blur-sm h-20";
+    ? "bg-white shadow-md h-20"
+    : "bg-white/95 backdrop-blur-sm h-24";
 
   return (
     <header
@@ -113,19 +113,19 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 shrink-0">
+        <Link href="/" className="flex items-center gap-3 shrink-0">
           <Image
-            src="/images/logo.svg"
+            src="/images/logo.png"
             alt="성모영상의학과 로고"
-            width={40}
-            height={40}
-            className="w-9 h-9 md:w-10 md:h-10"
+            width={48}
+            height={48}
+            className="w-11 h-11 md:w-12 md:h-12"
           />
           <div className="flex flex-col">
-            <span className={`font-bold text-lg leading-tight tracking-tight transition-colors ${useWhiteText ? "text-white" : "text-primary"}`}>
+            <span className={`font-bold text-xl leading-tight tracking-tight transition-colors ${useWhiteText ? "text-white" : "text-primary"}`}>
               성모영상의학과
             </span>
-            <span className={`text-xs transition-colors ${useWhiteText ? "text-white/70" : "text-text-gray"}`}>종합검진센터</span>
+            <span className={`text-sm transition-colors ${useWhiteText ? "text-white/70" : "text-text-gray"}`}>종합검진센터</span>
           </div>
         </Link>
 
@@ -140,7 +140,7 @@ export default function Header() {
             >
               <Link
                 href={menu.href}
-                className={`px-5 h-full flex items-center text-[15px] font-semibold transition-colors ${useWhiteText ? "text-white/90 hover:text-white" : "text-text-dark hover:text-primary"}`}
+                className={`px-6 h-full flex items-center text-base font-semibold transition-colors ${useWhiteText ? "text-white/90 hover:text-white" : "text-text-dark hover:text-primary"}`}
               >
                 {menu.title}
               </Link>
@@ -150,7 +150,7 @@ export default function Header() {
                     <Link
                       key={subIdx}
                       href={sub.href}
-                      className="block px-5 py-2.5 text-sm text-text-gray hover:text-primary hover:bg-bg-light transition-colors"
+                      className="block px-5 py-3 text-sm text-text-gray hover:text-primary hover:bg-bg-light transition-colors"
                     >
                       {sub.title}
                     </Link>
@@ -164,10 +164,10 @@ export default function Header() {
         {/* Phone number - desktop */}
         <a
           href="tel:042-000-0000"
-          className={`hidden lg:flex items-center gap-1.5 font-bold text-sm ${useWhiteText ? "text-white" : "text-primary"}`}
+          className={`hidden lg:flex items-center gap-2 font-bold text-base ${useWhiteText ? "text-white" : "text-primary"}`}
         >
           <svg
-            className="w-4 h-4"
+            className="w-5 h-5"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -212,7 +212,7 @@ export default function Header() {
           {menuItems.map((menu, idx) => (
             <div key={idx} className="border-b border-gray-100">
               <button
-                className="w-full px-6 py-3.5 text-left font-semibold text-text-dark flex justify-between items-center"
+                className="w-full px-6 py-4 text-left font-semibold text-base text-text-dark flex justify-between items-center"
                 onClick={() =>
                   setActiveMenu(activeMenu === idx ? null : idx)
                 }
@@ -240,7 +240,7 @@ export default function Header() {
                     <Link
                       key={subIdx}
                       href={sub.href}
-                      className="block px-8 py-2.5 text-sm text-text-gray hover:text-primary"
+                      className="block px-8 py-3 text-sm text-text-gray hover:text-primary"
                       onClick={() => setMobileOpen(false)}
                     >
                       {sub.title}
