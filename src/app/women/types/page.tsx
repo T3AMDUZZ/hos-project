@@ -81,7 +81,7 @@ export default function WomenTypesPage() {
           ))}
         </div>
 
-        <div className="mt-12 bg-accent/10 rounded-xl p-6">
+        <div className="mt-12 bg-primary/10 rounded-xl p-6">
           <p className="text-sm text-text-dark">
             <strong>안내:</strong> 여성 건강검진은 예약 후 방문하시면 보다 편리하게 검진받으실 수 있습니다.
             검진 관련 문의는 전화(042-000-0000)로 연락해 주시기 바랍니다.

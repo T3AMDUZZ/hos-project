@@ -17,7 +17,7 @@ export default function MapSection() {
           </h2>
         </div>
         <div className="grid lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 rounded-2xl overflow-hidden bg-gray-200 h-[400px] flex items-center justify-center">
+          <div className="lg:col-span-2 rounded-2xl overflow-hidden bg-gray-200 h-[300px] md:h-[350px] lg:h-[400px] flex items-center justify-center">
             {/* 카카오맵 embed 영역 - 실제 배포 시 API 키로 교체 */}
             <div className="text-center text-text-light">
               <svg className="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

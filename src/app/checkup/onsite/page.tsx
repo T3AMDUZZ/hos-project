@@ -84,7 +84,7 @@ export default function OnsiteCheckupPage() {
           ))}
         </div>
 
-        <div className="bg-accent/10 rounded-xl p-6 text-center">
+        <div className="bg-primary/10 rounded-xl p-6 text-center">
           <p className="text-text-dark mb-3">
             출장검진에 대한 자세한 상담은 전화로 문의해 주시기 바랍니다.
           </p>

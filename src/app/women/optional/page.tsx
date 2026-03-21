@@ -67,13 +67,13 @@ export default function WomenOptionalPage() {
             <div key={sIdx}>
               <h3 className="text-lg font-bold text-primary mb-3">{section.category}</h3>
               <div className="bg-white rounded-xl border border-gray-200 overflow-x-auto">
-                <table className="w-full min-w-[500px]">
+                <table className="w-full">
                   <thead>
                     <tr className="bg-bg-light">
-                      <th className="text-left px-6 py-3 text-sm font-semibold text-text-dark">
+                      <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold text-text-dark">
                         검사항목
                       </th>
-                      <th className="text-left px-6 py-3 text-sm font-semibold text-text-dark">
+                      <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold text-text-dark">
                         설명
                       </th>
                     </tr>
@@ -81,10 +81,10 @@ export default function WomenOptionalPage() {
                   <tbody className="divide-y divide-gray-100">
                     {section.items.map((item, idx) => (
                       <tr key={idx} className="hover:bg-bg-light/50">
-                        <td className="px-6 py-3 text-sm font-medium text-text-dark">
+                        <td className="px-3 md:px-6 py-3 text-xs md:text-sm font-medium text-text-dark">
                           {item.name}
                         </td>
-                        <td className="px-6 py-3 text-sm text-text-gray">{item.desc}</td>
+                        <td className="px-3 md:px-6 py-3 text-xs md:text-sm text-text-gray">{item.desc}</td>
                       </tr>
                     ))}
                   </tbody>

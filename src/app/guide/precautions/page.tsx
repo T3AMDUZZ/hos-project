@@ -141,7 +141,7 @@ export default function PrecautionsPage() {
               </div>
             ))}
           </div>
-          <div className="mt-6 bg-accent/10 rounded-lg p-4">
+          <div className="mt-6 bg-primary/10 rounded-lg p-4">
             <p className="text-xs text-text-dark">
               <strong>주의:</strong> 전처치 후 대변이 맑은 노란색 물처럼 나오면 장 정결이 완료된 것입니다.
               전처치 중 구토, 심한 복통 등 이상 증상 시 병원(042-000-0000)으로 연락해 주세요.

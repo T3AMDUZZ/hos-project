@@ -87,7 +87,7 @@ export default function DepartmentSection() {
               href={dept.href}
               className="bg-white rounded-xl p-8 hover:shadow-lg transition-all duration-300 group hover:-translate-y-1"
             >
-              <div className="text-primary group-hover:text-accent-dark transition-colors mb-4">
+              <div className="text-primary group-hover:text-primary-dark transition-colors mb-4">
                 {dept.icon}
               </div>
               <h3 className="text-lg font-bold text-text-dark mb-2 group-hover:text-primary transition-colors">

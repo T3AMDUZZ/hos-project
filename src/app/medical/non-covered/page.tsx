@@ -13,7 +13,7 @@ export default function NonCoveredPage() {
         ]}
       />
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="bg-accent/10 rounded-xl p-6 mb-8">
+        <div className="bg-primary/10 rounded-xl p-6 mb-8">
           <p className="text-sm text-text-dark">
             <strong>안내:</strong> 의료법 제45조에 의거하여 비급여 진료비용을
             공개합니다. 아래 비용은 2026년 2월 기준이며, 변동될 수 있습니다.
@@ -25,10 +25,10 @@ export default function NonCoveredPage() {
           <table className="w-full">
             <thead>
               <tr className="bg-primary text-white">
-                <th className="text-left px-6 py-3 text-sm font-semibold">분류</th>
-                <th className="text-left px-6 py-3 text-sm font-semibold">항목</th>
-                <th className="text-right px-6 py-3 text-sm font-semibold">비용</th>
-                <th className="text-left px-6 py-3 text-sm font-semibold hidden md:table-cell">비고</th>
+                <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold">분류</th>
+                <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold">항목</th>
+                <th className="text-right px-3 md:px-6 py-3 text-xs md:text-sm font-semibold">비용</th>
+                <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold hidden md:table-cell">비고</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
@@ -55,10 +55,10 @@ export default function NonCoveredPage() {
                 ["증명서", "영문진단서", "별도 문의", ""],
               ].map(([cat, item, cost, note], idx) => (
                 <tr key={idx} className="hover:bg-bg-light">
-                  <td className="px-6 py-3 text-sm font-medium text-primary">{cat}</td>
-                  <td className="px-6 py-3 text-sm text-text-dark">{item}</td>
-                  <td className="px-6 py-3 text-sm text-text-dark text-right font-medium">{cost}</td>
-                  <td className="px-6 py-3 text-sm text-text-light hidden md:table-cell">{note}</td>
+                  <td className="px-3 md:px-6 py-3 text-xs md:text-sm font-medium text-primary">{cat}</td>
+                  <td className="px-3 md:px-6 py-3 text-xs md:text-sm text-text-dark">{item}</td>
+                  <td className="px-3 md:px-6 py-3 text-xs md:text-sm text-text-dark text-right font-medium">{cost}</td>
+                  <td className="px-3 md:px-6 py-3 text-xs md:text-sm text-text-light hidden md:table-cell">{note}</td>
                 </tr>
               ))}
             </tbody>

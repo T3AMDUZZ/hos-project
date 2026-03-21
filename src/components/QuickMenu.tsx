@@ -80,7 +80,7 @@ export default function QuickMenu() {
               href={item.href}
               className="flex flex-col items-center text-center py-6 px-3 hover:bg-bg-light transition-colors group first:rounded-tl-2xl last:rounded-br-2xl lg:first:rounded-l-2xl lg:last:rounded-r-2xl"
             >
-              <div className="text-primary group-hover:text-accent-dark transition-colors mb-2.5">
+              <div className="text-primary group-hover:text-primary-dark transition-colors mb-2.5">
                 {item.icon}
               </div>
               <h3 className="font-semibold text-sm text-text-dark mb-0.5">

@@ -71,7 +71,7 @@ export default function EmploymentPage() {
           ))}
         </div>
 
-        <div className="bg-accent/10 rounded-xl p-6">
+        <div className="bg-primary/10 rounded-xl p-6">
           <h3 className="font-bold text-text-dark mb-3">유의사항</h3>
           <ul className="space-y-2 text-sm text-text-dark">
             <li className="flex items-start gap-2">

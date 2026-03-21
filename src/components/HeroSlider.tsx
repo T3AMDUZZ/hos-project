@@ -55,10 +55,10 @@ export default function HeroSlider() {
             <div
               className={`h-full bg-gradient-to-br ${slide.bg} flex items-center`}
             >
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-20 right-20 w-96 h-96 rounded-full border-2 border-white/20" />
-                <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full border border-white/10" />
-                <div className="absolute top-1/2 left-1/3 w-48 h-48 rounded-full bg-white/5" />
+              <div className="absolute inset-0 opacity-10 overflow-hidden">
+                <div className="absolute top-20 right-20 w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full border-2 border-white/20" />
+                <div className="absolute bottom-10 left-10 w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full border border-white/10" />
+                <div className="absolute top-1/2 left-1/3 w-24 h-24 md:w-36 md:h-36 lg:w-48 lg:h-48 rounded-full bg-white/5" />
               </div>
               <div className="max-w-7xl mx-auto px-4 relative z-10">
                 <div className="max-w-2xl">
@@ -71,10 +71,10 @@ export default function HeroSlider() {
                   <p className="text-white/80 text-base md:text-lg mb-8 leading-relaxed">
                     {slide.description}
                   </p>
-                  <div className="flex gap-4">
+                  <div className="flex gap-3 md:gap-4">
                     <Link
                       href={slide.cta.href}
-                      className="inline-flex items-center px-7 py-3.5 bg-white text-primary font-bold rounded-lg hover:bg-white/90 transition-colors"
+                      className="inline-flex items-center px-5 md:px-7 py-3 md:py-3.5 bg-white text-primary font-bold rounded-lg hover:bg-white/90 transition-colors text-sm md:text-base"
                     >
                       {slide.cta.text}
                       <svg
@@ -93,7 +93,7 @@ export default function HeroSlider() {
                     </Link>
                     <Link
                       href="/hospital/directions"
-                      className="inline-flex items-center px-7 py-3.5 border-2 border-white/40 text-white rounded-lg hover:bg-white/10 transition-colors"
+                      className="inline-flex items-center px-5 md:px-7 py-3 md:py-3.5 border-2 border-white/40 text-white rounded-lg hover:bg-white/10 transition-colors text-sm md:text-base"
                     >
                       오시는 길
                     </Link>
@@ -106,7 +106,7 @@ export default function HeroSlider() {
       </Swiper>
 
       {/* 좌측 하단 슬라이드 컨트롤 - 퀵메뉴 위 */}
-      <div className="absolute left-8 bottom-[140px] z-30 hidden md:flex items-center gap-3">
+      <div className="absolute left-4 md:left-8 bottom-[120px] md:bottom-[140px] z-30 hidden md:flex items-center gap-3">
         {/* 이전 */}
         <button
           onClick={() => swiperRef.current?.slidePrev()}

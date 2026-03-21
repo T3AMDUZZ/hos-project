@@ -140,7 +140,7 @@ export default function WomenCancerPage() {
           ))}
         </div>
 
-        <div className="mt-12 bg-accent/10 rounded-xl p-6">
+        <div className="mt-12 bg-primary/10 rounded-xl p-6">
           <p className="text-sm text-text-dark">
             <strong>조기 검진이 가장 중요합니다.</strong> 증상이 없더라도 정기적인 검진을 받으시면
             암을 초기 단계에서 발견하여 치료 성공률을 크게 높일 수 있습니다.

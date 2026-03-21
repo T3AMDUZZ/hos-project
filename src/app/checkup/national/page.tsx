@@ -62,20 +62,20 @@ export default function NationalCheckupPage() {
         {/* 대상자 안내 */}
         <h2 className="text-2xl font-bold text-text-dark mb-6">검진 대상자</h2>
         <div className="bg-white rounded-xl border border-gray-200 overflow-x-auto mb-12">
-          <table className="w-full min-w-[600px]">
+          <table className="w-full">
             <thead>
               <tr className="bg-primary text-white">
-                <th className="text-left px-6 py-3 text-sm font-semibold">구분</th>
-                <th className="text-left px-6 py-3 text-sm font-semibold">대상</th>
-                <th className="text-left px-6 py-3 text-sm font-semibold">검진주기</th>
+                <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold">구분</th>
+                <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold">대상</th>
+                <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold">검진주기</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
               {eligibility.map((item, idx) => (
                 <tr key={idx} className="hover:bg-bg-light/50">
-                  <td className="px-6 py-3 text-sm font-medium text-primary">{item.type}</td>
-                  <td className="px-6 py-3 text-sm text-text-gray">{item.target}</td>
-                  <td className="px-6 py-3 text-sm text-text-gray">{item.cycle}</td>
+                  <td className="px-3 md:px-6 py-3 text-xs md:text-sm font-medium text-primary">{item.type}</td>
+                  <td className="px-3 md:px-6 py-3 text-xs md:text-sm text-text-gray">{item.target}</td>
+                  <td className="px-3 md:px-6 py-3 text-xs md:text-sm text-text-gray">{item.cycle}</td>
                 </tr>
               ))}
             </tbody>
@@ -103,7 +103,7 @@ export default function NationalCheckupPage() {
 
         {/* 대상자 확인 방법 */}
         <h2 className="text-2xl font-bold text-text-dark mb-6">대상자 확인 방법</h2>
-        <div className="bg-accent/10 rounded-xl p-6">
+        <div className="bg-primary/10 rounded-xl p-6">
           <ul className="space-y-3 text-sm text-text-dark">
             <li className="flex items-start gap-2">
               <span className="text-primary font-bold mt-0.5">1.</span>

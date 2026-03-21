@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-[#2a2a2a] text-gray-300 pb-20 lg:pb-0">
       {/* 진료시간 + 전화번호 바 */}
       <div className="bg-primary">
-        <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col sm:flex-row items-center gap-6 text-white">
             <div className="text-center sm:text-left">
               <p className="text-sm opacity-80 mb-1">진료시간</p>
@@ -21,7 +21,7 @@ export default function Footer() {
             <p className="text-sm text-white/80 mb-1">대표전화</p>
             <a
               href="tel:042-000-0000"
-              className="text-3xl font-bold text-accent"
+              className="text-3xl font-bold text-primary-light"
             >
               042-000-0000
             </a>
@@ -30,7 +30,7 @@ export default function Footer() {
       </div>
 
       {/* 푸터 본문 */}
-      <div className="max-w-7xl mx-auto px-4 py-10">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 py-10">
         <div className="flex flex-col md:flex-row justify-between gap-8">
           <div>
             <h3 className="text-white font-bold text-lg mb-3">

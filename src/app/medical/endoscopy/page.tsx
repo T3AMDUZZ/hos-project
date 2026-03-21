@@ -83,7 +83,7 @@ export default function EndoscopyPage() {
         </div>
 
         {/* 주의사항 안내 배너 */}
-        <div className="mt-12 bg-accent/10 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-12 bg-primary/10 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-lg font-bold text-text-dark mb-2">
               내시경 검사 전 주의사항을 꼭 확인하세요

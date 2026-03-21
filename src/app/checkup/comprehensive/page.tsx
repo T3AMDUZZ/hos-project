@@ -82,7 +82,7 @@ export default function ComprehensivePage() {
                 href="tel:042-000-0000"
                 className={`inline-block mt-4 px-6 py-2 rounded-lg font-semibold text-sm ${
                   idx === 1
-                    ? "bg-accent text-text-dark"
+                    ? "bg-primary-light text-white"
                     : "bg-primary text-white"
                 }`}
               >
@@ -103,16 +103,16 @@ export default function ComprehensivePage() {
                 {section.category}
               </h3>
               <div className="bg-white rounded-xl border border-gray-200 overflow-x-auto">
-                <table className="w-full min-w-[600px]">
+                <table className="w-full">
                   <thead>
                     <tr className="bg-bg-light">
-                      <th className="text-left px-6 py-3 text-sm font-semibold text-text-dark">
+                      <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold text-text-dark">
                         검사항목
                       </th>
-                      <th className="text-left px-6 py-3 text-sm font-semibold text-text-dark">
+                      <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold text-text-dark">
                         검사내용
                       </th>
-                      <th className="text-left px-6 py-3 text-sm font-semibold text-text-dark">
+                      <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold text-text-dark">
                         관련질환
                       </th>
                     </tr>
@@ -120,13 +120,13 @@ export default function ComprehensivePage() {
                   <tbody className="divide-y divide-gray-100">
                     {section.items.map((item, idx) => (
                       <tr key={idx} className="hover:bg-bg-light/50">
-                        <td className="px-6 py-3 text-sm font-medium text-text-dark">
+                        <td className="px-3 md:px-6 py-3 text-xs md:text-sm font-medium text-text-dark">
                           {item.name}
                         </td>
-                        <td className="px-6 py-3 text-sm text-text-gray">
+                        <td className="px-3 md:px-6 py-3 text-xs md:text-sm text-text-gray">
                           {item.test}
                         </td>
-                        <td className="px-6 py-3 text-sm text-text-gray">
+                        <td className="px-3 md:px-6 py-3 text-xs md:text-sm text-text-gray">
                           {item.related}
                         </td>
                       </tr>

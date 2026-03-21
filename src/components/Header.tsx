@@ -140,7 +140,7 @@ export default function Header() {
             >
               <Link
                 href={menu.href}
-                className={`px-6 h-full flex items-center text-base font-semibold transition-colors ${useWhiteText ? "text-white/90 hover:text-white" : "text-text-dark hover:text-primary"}`}
+                className={`px-3 xl:px-6 h-full flex items-center text-sm xl:text-base font-semibold transition-colors ${useWhiteText ? "text-white/90 hover:text-white" : "text-text-dark hover:text-primary"}`}
               >
                 {menu.title}
               </Link>

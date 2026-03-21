@@ -133,7 +133,7 @@ export default function NoticeSection() {
                   </tr>
                 </tbody>
               </table>
-              <div className="mt-6 p-4 bg-accent/10 rounded-lg">
+              <div className="mt-6 p-4 bg-primary/10 rounded-lg">
                 <p className="text-sm text-text-dark">
                   <span className="font-semibold">대표전화</span>
                 </p>

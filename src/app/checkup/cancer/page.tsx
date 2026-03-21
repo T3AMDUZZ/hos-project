@@ -58,22 +58,22 @@ export default function CancerScreeningPage() {
 
         {/* 5대암 테이블 */}
         <div className="bg-white rounded-xl border border-gray-200 overflow-x-auto mb-12">
-          <table className="w-full min-w-[700px]">
+          <table className="w-full">
             <thead>
               <tr className="bg-primary text-white">
-                <th className="text-left px-6 py-3 text-sm font-semibold">암 종류</th>
-                <th className="text-left px-6 py-3 text-sm font-semibold">대상</th>
-                <th className="text-left px-6 py-3 text-sm font-semibold">검진주기</th>
-                <th className="text-left px-6 py-3 text-sm font-semibold">검사방법</th>
+                <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold">암 종류</th>
+                <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold">대상</th>
+                <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold">검진주기</th>
+                <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold">검사방법</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
               {cancerScreenings.map((item, idx) => (
                 <tr key={idx} className="hover:bg-bg-light/50">
-                  <td className="px-6 py-4 text-sm font-bold text-primary">{item.cancer}</td>
-                  <td className="px-6 py-4 text-sm text-text-dark">{item.target}</td>
-                  <td className="px-6 py-4 text-sm text-text-gray">{item.cycle}</td>
-                  <td className="px-6 py-4 text-sm text-text-gray">{item.method}</td>
+                  <td className="px-3 md:px-6 py-3 md:py-4 text-xs md:text-sm font-bold text-primary">{item.cancer}</td>
+                  <td className="px-3 md:px-6 py-3 md:py-4 text-xs md:text-sm text-text-dark">{item.target}</td>
+                  <td className="px-3 md:px-6 py-3 md:py-4 text-xs md:text-sm text-text-gray">{item.cycle}</td>
+                  <td className="px-3 md:px-6 py-3 md:py-4 text-xs md:text-sm text-text-gray">{item.method}</td>
                 </tr>
               ))}
             </tbody>
@@ -101,7 +101,7 @@ export default function CancerScreeningPage() {
           ))}
         </div>
 
-        <div className="mt-8 bg-accent/10 rounded-xl p-6">
+        <div className="mt-8 bg-primary/10 rounded-xl p-6">
           <p className="text-sm text-text-dark">
             <strong>참고:</strong> 간암 고위험군은 B형/C형 간염 바이러스 보유자, 간경변증 환자 등이 해당됩니다.
             정확한 대상 여부는 국민건강보험공단(1577-1000)에서 확인하실 수 있습니다.

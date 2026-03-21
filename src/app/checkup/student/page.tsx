@@ -45,18 +45,18 @@ export default function StudentCheckupPage() {
         {/* 학년별 검사항목 */}
         <h2 className="text-2xl font-bold text-text-dark mb-6">학년별 검사항목</h2>
         <div className="bg-white rounded-xl border border-gray-200 overflow-x-auto mb-12">
-          <table className="w-full min-w-[500px]">
+          <table className="w-full">
             <thead>
               <tr className="bg-primary text-white">
-                <th className="text-left px-6 py-3 text-sm font-semibold">대상 학년</th>
-                <th className="text-left px-6 py-3 text-sm font-semibold">검사항목</th>
+                <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold">대상 학년</th>
+                <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold">검사항목</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
               {gradeItems.map((item, idx) => (
                 <tr key={idx} className="hover:bg-bg-light/50">
-                  <td className="px-6 py-3 text-sm font-medium text-primary">{item.grade}</td>
-                  <td className="px-6 py-3 text-sm text-text-gray">{item.items}</td>
+                  <td className="px-3 md:px-6 py-3 text-xs md:text-sm font-medium text-primary">{item.grade}</td>
+                  <td className="px-3 md:px-6 py-3 text-xs md:text-sm text-text-gray">{item.items}</td>
                 </tr>
               ))}
             </tbody>
