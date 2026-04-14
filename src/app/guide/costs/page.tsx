@@ -16,7 +16,7 @@ export default function CostsPage() {
         <div className="bg-primary/10 rounded-xl p-6 mb-8">
           <p className="text-sm text-text-dark">
             <strong>안내:</strong> 아래 비용은 참고용이며, 검사 항목 및 상황에 따라 변동될 수 있습니다.
-            정확한 비용은 전화(042-000-0000)로 문의해 주시기 바랍니다.
+            정확한 비용은 전화(042-274-9885)로 문의해 주시기 바랍니다.
             건강보험 적용 여부에 따라 본인부담금이 달라질 수 있습니다.
           </p>
         </div>
@@ -100,7 +100,7 @@ export default function CostsPage() {
 
         <p className="text-xs text-text-light">
           * 상기 비용은 참고용이며, 실제 비용은 진료 내용에 따라 달라질 수 있습니다.
-          자세한 내용은 전화(042-000-0000)로 문의해 주시기 바랍니다.
+          자세한 내용은 전화(042-274-9885)로 문의해 주시기 바랍니다.
         </p>
       </div>
     </>

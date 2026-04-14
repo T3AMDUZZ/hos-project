@@ -138,10 +138,10 @@ export default function NoticeSection() {
                   <span className="font-semibold">대표전화</span>
                 </p>
                 <a
-                  href="tel:042-000-0000"
+                  href="tel:042-274-9885"
                   className="text-2xl font-bold text-primary"
                 >
-                  042-000-0000
+                  042-274-9885
                 </a>
               </div>
             </div>

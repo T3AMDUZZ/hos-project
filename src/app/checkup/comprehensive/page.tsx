@@ -79,7 +79,7 @@ export default function ComprehensivePage() {
               </p>
               <p className="text-lg font-bold">비용: 별도 문의</p>
               <a
-                href="tel:042-000-0000"
+                href="tel:042-274-9885"
                 className={`inline-block mt-4 px-6 py-2 rounded-lg font-semibold text-sm ${
                   idx === 1
                     ? "bg-primary-light text-white"

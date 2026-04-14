@@ -38,7 +38,7 @@ export default function MapSection() {
                 주소
               </h3>
               <p className="text-sm text-text-gray">
-                대전광역시 OO구 OO로 000
+                대전광역시 동구 보문로 4 플러스크리닉 3층
               </p>
             </div>
             <div className="bg-bg-light rounded-xl p-6">
@@ -49,10 +49,10 @@ export default function MapSection() {
                 전화번호
               </h3>
               <a
-                href="tel:042-000-0000"
+                href="tel:042-274-9885"
                 className="text-lg font-bold text-primary"
               >
-                042-000-0000
+                042-274-9885
               </a>
             </div>
             <div className="bg-bg-light rounded-xl p-6">

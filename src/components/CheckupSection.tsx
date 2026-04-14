@@ -138,7 +138,7 @@ export default function CheckupSection() {
                   상세 보기
                 </Link>
                 <a
-                  href="tel:042-000-0000"
+                  href="tel:042-274-9885"
                   className="inline-flex items-center px-6 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/5 transition-colors"
                 >
                   예약 상담

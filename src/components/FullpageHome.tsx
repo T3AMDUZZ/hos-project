@@ -30,7 +30,7 @@ const quickItems = [
   { icon: "🏥", title: "국가검진", desc: "건강보험공단", href: "/checkup/national" },
   { icon: "🔬", title: "검사장비", desc: "최신 장비 소개", href: "/guide/equipment" },
   { icon: "💰", title: "비급여안내", desc: "비용 안내", href: "/medical/non-covered" },
-  { icon: "📞", title: "전화상담", desc: "042-000-0000", href: "tel:042-000-0000" },
+  { icon: "📞", title: "전화상담", desc: "042-274-9885", href: "tel:042-274-9885" },
   { icon: "📍", title: "오시는길", desc: "찾아오시는 방법", href: "/hospital/directions" },
 ];
 

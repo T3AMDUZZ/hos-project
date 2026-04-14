@@ -89,10 +89,10 @@ export default function OnsiteCheckupPage() {
             출장검진에 대한 자세한 상담은 전화로 문의해 주시기 바랍니다.
           </p>
           <a
-            href="tel:042-000-0000"
+            href="tel:042-274-9885"
             className="inline-block bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
           >
-            042-000-0000 상담 전화
+            042-274-9885 상담 전화
           </a>
         </div>
       </div>

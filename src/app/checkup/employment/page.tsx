@@ -84,7 +84,7 @@ export default function EmploymentPage() {
             </li>
             <li className="flex items-start gap-2">
               <span className="text-primary">&#8226;</span>
-              <span>검진 비용은 항목에 따라 다르므로 전화(042-000-0000)로 문의해 주시기 바랍니다.</span>
+              <span>검진 비용은 항목에 따라 다르므로 전화(042-274-9885)로 문의해 주시기 바랍니다.</span>
             </li>
           </ul>
         </div>

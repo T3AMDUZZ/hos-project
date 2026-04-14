@@ -66,7 +66,7 @@ export default function GreetingPage() {
             <div className="mt-8 pt-6 border-t border-gray-200">
               <p className="text-text-dark font-bold text-lg">
                 성모영상의학과 원장
-                <span className="text-primary ml-2">홍길동</span>
+                <span className="text-primary ml-2">제은경</span>
               </p>
             </div>
           </div>

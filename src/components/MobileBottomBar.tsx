@@ -4,7 +4,7 @@ export default function MobileBottomBar() {
   return (
     <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 grid grid-cols-3 shadow-[0_-2px_10px_rgba(0,0,0,0.1)]">
       <a
-        href="tel:042-000-0000"
+        href="tel:042-274-9885"
         className="flex flex-col items-center justify-center py-3 text-primary"
       >
         <svg

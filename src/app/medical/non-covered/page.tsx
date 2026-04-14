@@ -67,7 +67,7 @@ export default function NonCoveredPage() {
 
         <p className="mt-6 text-xs text-text-light">
           * 상기 비용은 참고용이며, 실제 비용은 진료 내용에 따라 달라질 수 있습니다.
-          자세한 내용은 전화(042-000-0000)로 문의해 주시기 바랍니다.
+          자세한 내용은 전화(042-274-9885)로 문의해 주시기 바랍니다.
         </p>
       </div>
     </>

@@ -10,20 +10,20 @@ export default function Footer() {
             <div className="text-center sm:text-left">
               <p className="text-sm opacity-80 mb-1">진료시간</p>
               <p className="font-semibold">
-                평일 09:00~18:00 | 토요일 09:00~13:00
+                평일 08:30~17:30 | 토요일 08:30~13:00
               </p>
               <p className="text-sm opacity-80 mt-1">
-                점심 12:00~13:30 | 일요일/공휴일 휴진
+                점심 12:30~13:30 | 일요일/공휴일 휴진
               </p>
             </div>
           </div>
           <div className="text-center">
             <p className="text-sm text-white/80 mb-1">대표전화</p>
             <a
-              href="tel:042-000-0000"
+              href="tel:042-274-9885"
               className="text-3xl font-bold text-primary-light"
             >
-              042-000-0000
+              042-274-9885
             </a>
           </div>
         </div>
@@ -37,9 +37,9 @@ export default function Footer() {
               성모영상의학과의원
             </h3>
             <div className="text-sm space-y-1.5 text-gray-400">
-              <p>대표: 홍길동 | 사업자등록번호: 000-00-00000</p>
-              <p>대전광역시 OO구 OO로 000</p>
-              <p>Tel: 042-000-0000 | Fax: 042-000-0000</p>
+              <p>대표: 제은경 | 사업자등록번호: 305-90-92181</p>
+              <p>대전광역시 동구 보문로 4 플러스크리닉 3층</p>
+              <p>Tel: 042-274-9885~7 | Fax: 042-274-9888</p>
             </div>
           </div>
           <div className="flex gap-8">
