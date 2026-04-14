@@ -27,10 +27,27 @@
   --color-text-light: var(--text-light);
 }
 
+/* 전역 폰트 크기 확대 - 노년층 가독성 개선 (기본 16px → 17px) */
+html {
+  font-size: 17px;
+}
+
 body {
   font-family: "Noto Sans KR", "Pretendard", -apple-system, sans-serif;
   color: var(--text-dark);
   background: var(--bg-light);
+  line-height: 1.7;
+}
+
+/* 본문 텍스트 최소 크기 보장 — text-sm이 너무 작지 않도록 */
+p,
+li,
+span,
+a,
+td,
+th,
+label {
+  letter-spacing: -0.01em;
 }
 
 /* Swiper custom */
