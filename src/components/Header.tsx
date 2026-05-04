@@ -115,7 +115,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 shrink-0">
           <Image
-            src="/images/logo.png"
+            src="/images/logo-v2.png"
             alt="성모영상의학과 로고"
             width={48}
             height={48}
