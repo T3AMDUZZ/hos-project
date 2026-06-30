@@ -2,6 +2,116 @@ import PageBanner from "@/components/PageBanner";
 
 export const metadata = { title: "검사비용안내 | 성모영상의학과" };
 
+type Row = { name: string; code?: string; price: string; note?: string };
+
+const ultrasound: Row[] = [
+  { name: "상복부 초음파", code: "sono-ao", price: "60,000" },
+  { name: "자궁 초음파 (UP)", code: "sono-po", price: "60,000" },
+  { name: "갑상선 / 경부 초음파 (THS/UN)", code: "sono-to", price: "60,000" },
+  { name: "유방 초음파 (BS)", code: "sono-bro", price: "60,000" },
+  { name: "경부 연부조직 초음파", code: "sono-no", price: "60,000" },
+  { name: "피부 연부조직 초음파", code: "sono-sko", price: "60,000" },
+  { name: "전립선 초음파", code: "sono-pro", price: "80,000" },
+  { name: "경동맥 초음파", code: "sono-co", price: "90,000" },
+];
+
+const functional: Row[] = [
+  { name: "자율신경계 검사 (HRV · Deep Breathing)", code: "SA", price: "30,000", note: "자율신경계 및 심박변이도" },
+  { name: "비만도 검사 (인바디)", code: "BFATM", price: "20,000", note: "체지방분석 · 근감소증" },
+  { name: "성장판 검사", code: "GP-1", price: "50,000" },
+];
+
+const female: Row[] = [
+  { name: "자궁암 세포진 검사 (PAP)", code: "PAP-1", price: "20,000" },
+  { name: "자궁 확대경 검사", code: "PAP-22", price: "40,000" },
+];
+
+const brain: Row[] = [
+  { name: "경동맥 검사", code: "sono-co", price: "90,000" },
+  { name: "뇌졸중 검사", code: "CVT", price: "150,000", note: "경동맥 + 뇌 CT 촬영 포함" },
+];
+
+const vaccines: Row[] = [
+  { name: "B형 간염 예방접종", code: "HBVA", price: "35,000" },
+  { name: "A형 간염 예방접종", code: "HAV8", price: "80,000" },
+  { name: "독감 예방접종", code: "INF", price: "매년 따로 고지", note: "무료 대상자는 지역 안내" },
+  { name: "자궁경부백신 (SK 가다실)", code: "GDS18", price: "180,000" },
+  { name: "파상풍 예방접종", code: "TD", price: "40,000" },
+  { name: "폐렴구균 예방접종", code: "PPV", price: "120,000" },
+  { name: "대상포진 예방접종", code: "dds18", price: "180,000" },
+];
+
+const admin: Row[] = [
+  { name: "채용검진", code: "ADMC3", price: "30,000" },
+  { name: "공무원 건강검진", code: "ADMC4", price: "40,000" },
+  { name: "보건증 검사", code: "ADMC3", price: "30,000" },
+  { name: "어린이 단체 건강검진", code: "CADMC", price: "30,000" },
+];
+
+const docs: Row[] = [
+  { name: "일반 진단서", code: "gr", price: "20,000" },
+  { name: "근로능력평가 진단서", code: "gr1", price: "10,000" },
+  { name: "영문 진단서", code: "gr2", price: "20,000" },
+  { name: "진료확인서", code: "a113", price: "3,000" },
+  { name: "진료기록부 사본 (1~5매)", code: "a2", price: "1,000", note: "1매당" },
+  { name: "진료기록부 사본 (6매 이상)", code: "a21", price: "100", note: "1매당" },
+];
+
+const etc: Row[] = [
+  { name: "수면내시경 (수면비용)", code: "SLEEP", price: "35,000" },
+  { name: "영상자료 CD (CT · 초음파)", code: "CD5", price: "5,000" },
+];
+
+type Section = { title: string; rows: Row[]; accent?: "primary" | "accent" };
+
+const sections: Section[] = [
+  { title: "초음파 검사", rows: ultrasound, accent: "primary" },
+  { title: "기능 검사", rows: functional, accent: "primary" },
+  { title: "여성 검사", rows: female, accent: "primary" },
+  { title: "뇌혈관 검사", rows: brain, accent: "primary" },
+  { title: "예방접종", rows: vaccines, accent: "accent" },
+  { title: "검진 · 보건증", rows: admin, accent: "accent" },
+  { title: "진단서 · 증명서", rows: docs, accent: "accent" },
+  { title: "기타", rows: etc, accent: "accent" },
+];
+
+function CostTable({ section }: { section: Section }) {
+  const headerBg = section.accent === "accent" ? "bg-accent" : "bg-primary";
+  return (
+    <div className="mb-10">
+      <h3 className="text-lg font-bold text-text-dark mb-4">{section.title}</h3>
+      <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
+        <table className="w-full">
+          <thead>
+            <tr className={`${headerBg} text-white`}>
+              <th className="text-left px-4 md:px-6 py-3 text-xs md:text-sm font-semibold">항목</th>
+              <th className="text-left px-4 md:px-6 py-3 text-xs md:text-sm font-semibold hidden sm:table-cell">코드</th>
+              <th className="text-right px-4 md:px-6 py-3 text-xs md:text-sm font-semibold">가격 (원)</th>
+              <th className="text-left px-4 md:px-6 py-3 text-xs md:text-sm font-semibold hidden md:table-cell">비고</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-gray-100">
+            {section.rows.map((row, idx) => (
+              <tr key={idx} className="hover:bg-bg-light transition-colors">
+                <td className="px-4 md:px-6 py-3 text-sm text-text-dark font-medium">{row.name}</td>
+                <td className="px-4 md:px-6 py-3 text-xs text-text-light font-mono hidden sm:table-cell">
+                  {row.code ?? "-"}
+                </td>
+                <td className="px-4 md:px-6 py-3 text-sm text-text-dark text-right font-semibold tabular-nums">
+                  {row.price}
+                </td>
+                <td className="px-4 md:px-6 py-3 text-xs text-text-gray hidden md:table-cell">
+                  {row.note ?? ""}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
 export default function CostsPage() {
   return (
     <>
@@ -13,94 +123,37 @@ export default function CostsPage() {
         ]}
       />
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="bg-primary/10 rounded-xl p-6 mb-8">
-          <p className="text-sm text-text-dark">
-            <strong>안내:</strong> 아래 비용은 참고용이며, 검사 항목 및 상황에 따라 변동될 수 있습니다.
-            정확한 비용은 전화(042-274-9885)로 문의해 주시기 바랍니다.
-            건강보험 적용 여부에 따라 본인부담금이 달라질 수 있습니다.
+        <div className="mb-10">
+          <h2 className="text-2xl font-bold text-text-dark mb-3">비급여 항목 및 수가</h2>
+          <p className="text-text-gray leading-relaxed">
+            의료법 제45조에 의거하여 성모영상의학과의 비급여 진료비용을 공개합니다.
+            아래 가격은 <strong className="text-text-dark">2024년 1월 기준</strong>이며, 사정에 따라 변동될 수 있습니다.
           </p>
         </div>
 
-        {/* 건강검진 비용 */}
-        <h2 className="text-2xl font-bold text-text-dark mb-6">건강검진 비용</h2>
-        <div className="bg-white rounded-xl border border-gray-200 overflow-hidden mb-12">
-          <table className="w-full">
-            <thead>
-              <tr className="bg-primary text-white">
-                <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold">분류</th>
-                <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold">항목</th>
-                <th className="text-right px-3 md:px-6 py-3 text-xs md:text-sm font-semibold">비용</th>
-                <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold hidden md:table-cell">비고</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-100">
-              {[
-                ["종합검진", "A형 (기본)", "별도 문의", "기초검사 + 혈액 + 영상"],
-                ["종합검진", "B형 (정밀)", "별도 문의", "A형 + 추가 정밀검사"],
-                ["종합검진", "C형 (프리미엄)", "별도 문의", "B형 + CT, 대장내시경 등"],
-                ["국가검진", "일반건강검진", "무료", "대상자에 한함"],
-                ["국가검진", "5대암검진", "무료~10%", "대상자에 한함"],
-                ["채용검진", "일반 채용검진", "별도 문의", ""],
-                ["채용검진", "공무원 채용검진", "별도 문의", ""],
-                ["보건증", "건강진단결과서", "별도 문의", ""],
-                ["학생검진", "학생 건강검진", "무료", "지정 기간 내"],
-              ].map(([cat, item, cost, note], idx) => (
-                <tr key={idx} className="hover:bg-bg-light">
-                  <td className="px-3 md:px-6 py-3 text-xs md:text-sm font-medium text-primary">{cat}</td>
-                  <td className="px-3 md:px-6 py-3 text-xs md:text-sm text-text-dark">{item}</td>
-                  <td className="px-3 md:px-6 py-3 text-xs md:text-sm text-text-dark text-right font-medium">{cost}</td>
-                  <td className="px-3 md:px-6 py-3 text-xs md:text-sm text-text-light hidden md:table-cell">{note}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="bg-primary/5 border border-primary/10 rounded-2xl p-6 mb-10 flex items-start gap-4">
+          <div className="w-10 h-10 rounded-full bg-primary/15 text-primary flex items-center justify-center shrink-0">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div className="text-sm text-text-gray leading-relaxed">
+            <p className="mb-1">
+              건강보험 적용 여부 및 검사 내용에 따라 실제 본인부담금이 달라질 수 있습니다.
+            </p>
+            <p>
+              정확한 비용은 <strong className="text-primary">042-274-9885~7</strong>로 문의해 주시기 바랍니다.
+            </p>
+          </div>
         </div>
 
-        {/* 개별 검사 비용 */}
-        <h2 className="text-2xl font-bold text-text-dark mb-6">개별 검사 비용</h2>
-        <div className="bg-white rounded-xl border border-gray-200 overflow-hidden mb-8">
-          <table className="w-full">
-            <thead>
-              <tr className="bg-primary text-white">
-                <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold">분류</th>
-                <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold">항목</th>
-                <th className="text-right px-3 md:px-6 py-3 text-xs md:text-sm font-semibold">비용</th>
-                <th className="text-left px-3 md:px-6 py-3 text-xs md:text-sm font-semibold hidden md:table-cell">비고</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-100">
-              {[
-                ["영상검사", "흉부 X선", "별도 문의", ""],
-                ["영상검사", "복부 초음파", "별도 문의", ""],
-                ["영상검사", "갑상선 초음파", "별도 문의", ""],
-                ["영상검사", "유방 초음파", "별도 문의", ""],
-                ["영상검사", "유방촬영", "별도 문의", ""],
-                ["CT", "흉부 CT", "별도 문의", ""],
-                ["CT", "복부 CT", "별도 문의", ""],
-                ["CT", "뇌 CT", "별도 문의", ""],
-                ["내시경", "위내시경 (비수면)", "별도 문의", ""],
-                ["내시경", "위내시경 (수면)", "별도 문의", "수면비 별도"],
-                ["내시경", "대장내시경 (비수면)", "별도 문의", ""],
-                ["내시경", "대장내시경 (수면)", "별도 문의", "수면비 별도"],
-                ["기능검사", "골밀도 검사", "별도 문의", ""],
-                ["기능검사", "동맥경화 검사", "별도 문의", ""],
-                ["기능검사", "심전도 검사", "별도 문의", ""],
-                ["기능검사", "폐기능 검사", "별도 문의", ""],
-              ].map(([cat, item, cost, note], idx) => (
-                <tr key={idx} className="hover:bg-bg-light">
-                  <td className="px-3 md:px-6 py-3 text-xs md:text-sm font-medium text-primary">{cat}</td>
-                  <td className="px-3 md:px-6 py-3 text-xs md:text-sm text-text-dark">{item}</td>
-                  <td className="px-3 md:px-6 py-3 text-xs md:text-sm text-text-dark text-right font-medium">{cost}</td>
-                  <td className="px-3 md:px-6 py-3 text-xs md:text-sm text-text-light hidden md:table-cell">{note}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        {sections.map((section, idx) => (
+          <CostTable key={idx} section={section} />
+        ))}
 
-        <p className="text-xs text-text-light">
-          * 상기 비용은 참고용이며, 실제 비용은 진료 내용에 따라 달라질 수 있습니다.
-          자세한 내용은 전화(042-274-9885)로 문의해 주시기 바랍니다.
+        <p className="mt-4 text-xs text-text-light leading-relaxed">
+          * 상기 비용은 2024년 1월 기준이며, 진료 내용에 따라 달라질 수 있습니다.
+          종합건강검진 비용은 검진 종류에 따라 별도이며, 상세 내역은 병원으로 문의해 주시기 바랍니다.
         </p>
       </div>
     </>

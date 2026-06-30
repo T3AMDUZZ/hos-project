@@ -2,50 +2,195 @@ import PageBanner from "@/components/PageBanner";
 
 export const metadata = { title: "검사장비소개 | 성모영상의학과" };
 
-const equipments = [
+type Equipment = {
+  name: string;
+  model: string;
+  country: string;
+  qty: string;
+  purpose: string;
+  category: "image" | "lab" | "support";
+};
+
+const equipments: Equipment[] = [
   {
-    title: "CT (컴퓨터 단층촬영)",
-    desc: "인체의 횡단면을 촬영하여 3차원 영상으로 재구성하는 정밀 진단 장비입니다. 흉부, 복부, 뇌, 척추 등 다양한 부위의 질환을 정확하게 진단할 수 있습니다.",
+    name: "컴퓨터 단층촬영기 (CT)",
+    model: "SITEC 2000I (삼성 GE)",
+    country: "KOREA",
+    qty: "1대",
+    purpose: "뇌, 골격, 내부장기를 단면상으로 세부 검사",
+    category: "image",
   },
   {
-    title: "초음파 진단장치",
-    desc: "초음파를 이용하여 복부, 갑상선, 유방, 심장 등 체내 장기를 실시간으로 영상화하는 장비입니다. 방사선 피폭 없이 안전하게 검사할 수 있습니다.",
+    name: "초음파 진단기",
+    model: "LOGIQ 7 EXPERT",
+    country: "JAPAN",
+    qty: "1대",
+    purpose: "간 · 담낭 · 췌장 · 신장 · 이자 · 유방 · 전립선 · 갑상선 등 장기 검사",
+    category: "image",
   },
   {
-    title: "디지털 X선 촬영장치",
-    desc: "흉부, 복부, 골격계 등의 기본적인 영상 검사를 시행하는 디지털 X선 장비입니다. 기존 아날로그 방식보다 적은 방사선량으로 선명한 영상을 얻을 수 있습니다.",
+    name: "방사선 직접촬영 장치",
+    model: "R-640-150 DXG 525R / R-500-125 (에스지헬스케어)",
+    country: "KOREA",
+    qty: "3대",
+    purpose: "흉부, 복부, 골격계 기본 X선 영상 촬영",
+    category: "image",
   },
   {
-    title: "디지털 유방촬영기 (맘모그래피)",
-    desc: "유방암 조기 발견을 위한 전용 X선 촬영 장비입니다. 디지털 방식으로 미세석회화와 작은 종괴까지 정밀하게 검출할 수 있습니다.",
+    name: "위장조영 촬영기",
+    model: "RF-630-150 DOSHIBA",
+    country: "JAPAN",
+    qty: "1대",
+    purpose: "식도 · 위 · 십이지장 · 소장 · 대장의 암, 궤양, 염증 등 병변 검사",
+    category: "image",
   },
   {
-    title: "내시경 장비",
-    desc: "위내시경과 대장내시경을 시행하는 최신 전자내시경 장비입니다. 고화질 영상으로 소화기관 내부를 직접 관찰하며, 필요 시 조직검사도 동시에 가능합니다.",
+    name: "유방촬영장치 (맘모그래피)",
+    model: "MHR-100-39 / DMX-600",
+    country: "KOREA",
+    qty: "1대",
+    purpose: "유방암 · 섬유종 · 유선 질환 진단",
+    category: "image",
   },
   {
-    title: "심전도 검사기 (ECG)",
-    desc: "심장의 전기적 활동을 기록하여 부정맥, 심근허혈, 심비대 등 심장 질환을 진단하는 장비입니다.",
+    name: "골밀도 측정기 (QCT)",
+    model: "QCT",
+    country: "KOREA",
+    qty: "1대",
+    purpose: "CT를 이용한 정량적 골다공증 · 골감소증 검사",
+    category: "image",
   },
   {
-    title: "폐활량측정기 (Spirometer)",
-    desc: "폐의 환기 기능을 평가하는 장비로, 폐활량과 호기량을 측정하여 천식, COPD 등 폐기능 이상을 진단합니다.",
+    name: "내시경",
+    model: "OLYMPUS",
+    country: "JAPAN",
+    qty: "2대",
+    purpose: "소화기 계통의 암 · 궤양 · 염증 병변 검사",
+    category: "image",
   },
   {
-    title: "골밀도측정기 (DEXA)",
-    desc: "이중에너지 X선 흡수법을 이용하여 뼈의 밀도를 정밀하게 측정하는 장비입니다. 골다공증 진단과 추적 관찰에 필수적입니다.",
+    name: "혈액화학 분석기",
+    model: "Cobas C311 HITACHI",
+    country: "JAPAN",
+    qty: "1대",
+    purpose: "혈액 생화학 검사",
+    category: "lab",
   },
   {
-    title: "스트레스측정기 (HRV)",
-    desc: "심박변이도(HRV) 분석을 통해 자율신경계 균형 상태와 스트레스 수치를 측정하는 장비입니다.",
+    name: "혈액학 검사기",
+    model: "celltac L",
+    country: "JAPAN",
+    qty: "1대",
+    purpose: "혈색소, 헤마토크리트, 백혈구수, 적혈구수 측정",
+    category: "lab",
   },
   {
-    title: "동맥경화측정기",
-    desc: "사지의 혈압과 맥파를 동시에 측정하여 동맥의 탄성도와 혈관 나이를 평가하는 장비입니다. 동맥경화의 조기 발견에 도움을 줍니다.",
+    name: "뇨화학 자동분석기",
+    model: "UROTRONRL9",
+    country: "GERMANY",
+    qty: "1대",
+    purpose: "소변 화학 자동 분석",
+    category: "lab",
+  },
+  {
+    name: "자율신경계 검사기",
+    model: "SA3000NE",
+    country: "KOREA",
+    qty: "1대",
+    purpose: "심장 및 자율신경계 활동도 평가 (심박동 변이도)",
+    category: "lab",
+  },
+  {
+    name: "체지방 측정기 (인바디)",
+    model: "인바디 9770",
+    country: "KOREA",
+    qty: "1대",
+    purpose: "체지방 · 근감소증 분석",
+    category: "lab",
+  },
+  {
+    name: "고압 멸균기",
+    model: "MEMMERT",
+    country: "GERMANY",
+    qty: "1대",
+    purpose: "의료기구 멸균 및 건조",
+    category: "support",
+  },
+  {
+    name: "내시경 세척기",
+    model: "HTW-01 (휴온스메디케어)",
+    country: "KOREA",
+    qty: "2대",
+    purpose: "내시경 세척 및 멸균",
+    category: "support",
+  },
+  {
+    name: "검진용 차량",
+    model: "45인승 승합차",
+    country: "KOREA",
+    qty: "2대",
+    purpose: "이동식 출장 검진",
+    category: "support",
   },
 ];
 
+const cancerEquipment = [
+  {
+    exam: "위암",
+    method: "위장조영 촬영",
+    equipment: "위장조영 촬영기",
+    model: "IR-500-125",
+    country: "KOREA",
+    bought: "2003",
+    made: "2002",
+  },
+  {
+    exam: "상부 소화관",
+    method: "내시경 검사",
+    equipment: "내시경",
+    model: "OLYMPUS",
+    country: "JAPAN",
+    bought: "2003",
+    made: "-",
+  },
+  {
+    exam: "유방암",
+    method: "유방 촬영",
+    equipment: "유방촬영장치",
+    model: "HF-47",
+    country: "JAPAN",
+    bought: "2003",
+    made: "1997",
+  },
+  {
+    exam: "초음파 영상",
+    method: "진단",
+    equipment: "초음파기",
+    model: "LOGIQ 400CL",
+    country: "KOREA",
+    bought: "2003",
+    made: "2002",
+  },
+];
+
+const categoryConfig = {
+  image: { label: "영상 · 진단 장비", color: "primary" },
+  lab: { label: "검사 · 분석 장비", color: "accent" },
+  support: { label: "지원 장비", color: "primary" },
+} as const;
+
+const countryFlag: Record<string, string> = {
+  JAPAN: "🇯🇵",
+  KOREA: "🇰🇷",
+  GERMANY: "🇩🇪",
+};
+
 export default function EquipmentPage() {
+  const groupedByCategory = (["image", "lab", "support"] as const).map((cat) => ({
+    cat,
+    items: equipments.filter((e) => e.category === cat),
+  }));
+
   return (
     <>
       <PageBanner
@@ -55,47 +200,163 @@ export default function EquipmentPage() {
           { title: "검사장비소개" },
         ]}
       />
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="max-w-3xl mb-12">
+
+      {/* 인트로 */}
+      <section className="max-w-7xl mx-auto px-4 pt-16 pb-10">
+        <div className="max-w-3xl mb-8">
           <h2 className="text-2xl font-bold text-text-dark mb-4">
-            최신 의료장비로 정확한 진단을 제공합니다
+            최신 의료 장비로 정확한 진단을 제공합니다
           </h2>
           <p className="text-text-gray leading-relaxed">
-            성모영상의학과는 정확한 진단과 편안한 검진을 위해 최신 의료장비를 갖추고 있습니다.
-            영상의학과 전문의가 직접 검사하고 판독하여 신뢰할 수 있는 결과를 제공합니다.
+            성모영상의학과는 국내외 검증된 의료 장비를 도입하여 정확하고 신뢰할 수 있는
+            진단 결과를 제공합니다. 영상의학과 전문의가 직접 장비를 운용하고 판독합니다.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {equipments.map((item, idx) => (
-            <div
-              key={idx}
-              className="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow"
-            >
-              {/* 이미지 플레이스홀더 */}
-              <div className="bg-gradient-to-br from-primary/10 to-primary/5 aspect-[4/3] flex items-center justify-center">
-                <svg
-                  className="w-12 h-12 text-primary/30"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1}
-                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-              </div>
-              <div className="p-5">
-                <h3 className="font-bold text-text-dark text-lg mb-2">{item.title}</h3>
-                <p className="text-sm text-text-gray leading-relaxed">{item.desc}</p>
-              </div>
+        <div className="grid grid-cols-3 gap-4 max-w-2xl">
+          <div className="bg-white rounded-xl border border-gray-100 p-5 text-center">
+            <div className="text-3xl font-bold text-primary mb-1">{equipments.length}</div>
+            <div className="text-xs text-text-gray">보유 장비 종류</div>
+          </div>
+          <div className="bg-white rounded-xl border border-gray-100 p-5 text-center">
+            <div className="text-3xl font-bold text-primary mb-1">
+              {equipments.reduce((sum, e) => sum + parseInt(e.qty), 0)}+
             </div>
-          ))}
+            <div className="text-xs text-text-gray">총 장비 대수</div>
+          </div>
+          <div className="bg-white rounded-xl border border-gray-100 p-5 text-center">
+            <div className="text-3xl font-bold text-primary mb-1">
+              {new Set(equipments.map((e) => e.country)).size}
+            </div>
+            <div className="text-xs text-text-gray">제조국</div>
+          </div>
         </div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-4">
+        <hr className="border-gray-200" />
       </div>
+
+      {/* 장비 카테고리별 */}
+      <section className="max-w-7xl mx-auto px-4 py-16">
+        {groupedByCategory.map(({ cat, items }) => (
+          <div key={cat} className="mb-14 last:mb-0">
+            <div className="flex items-center gap-3 mb-6">
+              <div
+                className={`w-1 h-7 rounded-full ${
+                  categoryConfig[cat].color === "accent" ? "bg-accent" : "bg-primary"
+                }`}
+              />
+              <h2 className="text-xl font-bold text-text-dark">{categoryConfig[cat].label}</h2>
+              <span className="text-sm text-text-light">({items.length}종)</span>
+            </div>
+
+            <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-bg-light border-b border-gray-100">
+                    <th className="text-left px-4 md:px-6 py-3 text-xs md:text-sm font-semibold text-text-dark">
+                      장비명
+                    </th>
+                    <th className="text-left px-4 md:px-6 py-3 text-xs md:text-sm font-semibold text-text-dark hidden md:table-cell">
+                      모델명
+                    </th>
+                    <th className="text-center px-3 py-3 text-xs md:text-sm font-semibold text-text-dark w-16">
+                      수량
+                    </th>
+                    <th className="text-center px-3 py-3 text-xs md:text-sm font-semibold text-text-dark w-24">
+                      제조국
+                    </th>
+                    <th className="text-left px-4 md:px-6 py-3 text-xs md:text-sm font-semibold text-text-dark hidden lg:table-cell">
+                      용도
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  {items.map((eq, idx) => (
+                    <tr key={idx} className="hover:bg-bg-light/50">
+                      <td className="px-4 md:px-6 py-4">
+                        <div className="font-semibold text-sm text-text-dark">{eq.name}</div>
+                        <div className="md:hidden text-xs text-text-light mt-1 font-mono">{eq.model}</div>
+                        <div className="lg:hidden text-xs text-text-gray mt-1.5">{eq.purpose}</div>
+                      </td>
+                      <td className="px-4 md:px-6 py-4 text-sm text-text-gray font-mono hidden md:table-cell">
+                        {eq.model}
+                      </td>
+                      <td className="px-3 py-4 text-sm text-text-dark text-center font-semibold">
+                        {eq.qty}
+                      </td>
+                      <td className="px-3 py-4 text-center">
+                        <span className="inline-flex items-center gap-1 text-xs text-text-gray">
+                          <span>{countryFlag[eq.country] ?? ""}</span>
+                          <span>{eq.country}</span>
+                        </span>
+                      </td>
+                      <td className="px-4 md:px-6 py-4 text-sm text-text-gray hidden lg:table-cell">
+                        {eq.purpose}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        ))}
+      </section>
+
+      <div className="max-w-7xl mx-auto px-4">
+        <hr className="border-gray-200" />
+      </div>
+
+      {/* 특정암 검사 장비 */}
+      <section className="max-w-7xl mx-auto px-4 py-16">
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-text-dark mb-3">특정암 검사 장비</h2>
+          <p className="text-text-gray leading-relaxed">
+            국가 5대암 검진에 사용되는 지정 장비 정보입니다.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
+          <table className="w-full">
+            <thead>
+              <tr className="bg-accent text-white">
+                <th className="text-left px-4 md:px-6 py-3 text-sm font-semibold">검사명</th>
+                <th className="text-left px-4 md:px-6 py-3 text-sm font-semibold">장비명</th>
+                <th className="text-left px-4 md:px-6 py-3 text-sm font-semibold hidden md:table-cell">모델명</th>
+                <th className="text-center px-3 py-3 text-sm font-semibold hidden md:table-cell">제조국</th>
+                <th className="text-center px-3 py-3 text-sm font-semibold hidden lg:table-cell">구입/제조년도</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-100">
+              {cancerEquipment.map((eq, idx) => (
+                <tr key={idx} className="hover:bg-bg-light/50">
+                  <td className="px-4 md:px-6 py-4">
+                    <div className="font-semibold text-sm text-text-dark">{eq.exam}</div>
+                    <div className="text-xs text-text-light mt-0.5">{eq.method}</div>
+                  </td>
+                  <td className="px-4 md:px-6 py-4 text-sm text-text-dark">
+                    {eq.equipment}
+                    <div className="md:hidden text-xs text-text-gray font-mono mt-1">{eq.model}</div>
+                  </td>
+                  <td className="px-4 md:px-6 py-4 text-sm text-text-gray font-mono hidden md:table-cell">
+                    {eq.model}
+                  </td>
+                  <td className="px-3 py-4 text-center hidden md:table-cell">
+                    <span className="inline-flex items-center gap-1 text-xs text-text-gray">
+                      <span>{countryFlag[eq.country] ?? ""}</span>
+                      <span>{eq.country}</span>
+                    </span>
+                  </td>
+                  <td className="px-3 py-4 text-center text-xs text-text-gray hidden lg:table-cell">
+                    {eq.bought} / {eq.made}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
     </>
   );
 }
