@@ -94,14 +94,17 @@ const colonoscopyPrep = [
   "당뇨가 있는 분은 검사 당일 인슐린 주사나 당뇨약은 절대 투약하지 마십시오.",
   "고혈압이 있는 분은 검사 당일 아침 소량의 물과 함께 아침 고혈압약만 드십시오.",
   "검사 당일은 어지러울 수 있고 운전하면 안 되므로 보호자와 함께 오십시오.",
+  "분실 우려가 있으므로 귀중품은 가져오지 마시고, 조직검사를 추가로 시행할 수 있으므로 추가 수납에 대해 준비하십시오.",
+  "조직검사를 원하지 않을 경우 검사 전에 미리 말씀해 주십시오.",
 ];
 
 const colonoscopyAfter = [
-  "검사 중 공기 주입으로 인해 복부 팽만과 통증이 발생할 수 있습니다. 복식호흡 및 복부 마사지를 하여 가스를 배출하세요.",
+  "검사 중 공기 주입으로 인해 복부 팽만과 통증이 발생할 수 있습니다. 복식호흡 및 복부 마사지를 하여 가스를 배출하세요. 따뜻한 물주머니를 복부 위에 두는 것도 도움이 됩니다.",
   "내시경 기계의 자극으로 항문 주위에 불편감이 발생할 수 있습니다. 귀가 후 좌욕을 충분히 하세요. (40도의 따뜻한 물에 15~20분)",
   "검사 후 식사 여부에 대해서는 의사와 상의하시기 바랍니다.",
   "검사 당일 운전, 기계를 다루거나 사우나, 심한 운동은 하지 마십시오.",
   "조직검사 후 대변에 피가 조금 섞일 수 있으나 곧 멈추며, 계속 피가 나오면 병원으로 오시기 바랍니다.",
+  "검사 시 정확한 진단을 위해 푸른색 색소를 사용하기도 하므로, 대변이 푸른색으로 나올 수 있으나 걱정하실 필요는 없습니다.",
 ];
 
 const coolprepAM = [
@@ -177,7 +180,7 @@ export default function InternalPage() {
         <div className="mb-10">
           <h2 className="text-2xl font-bold text-text-dark mb-3">소화기내과 운영</h2>
           <p className="text-text-gray leading-relaxed">
-            상부위장관검사(위내시경) 및 대장내시경 검사를 시행하고 있습니다.
+            상부위장관검사(위내시경 및 위장조영촬영) 및 대장내시경 검사를 시행하고 있습니다.
           </p>
         </div>
 
@@ -211,6 +214,7 @@ export default function InternalPage() {
             <div className="bg-white rounded-2xl border border-gray-100 p-8">
               <h3 className="text-lg font-bold text-text-dark mb-3">검사 안내</h3>
               <p className="text-text-gray text-sm leading-relaxed">
+                <strong className="text-text-dark">상부위장관검사(위내시경 및 위장조영촬영)</strong>를 통해
                 식도, 위, 십이지장의 이상 병변을 확인하고 조직검사를 시행합니다.
                 악성 병변이 발견될 경우 상급병원으로 전원합니다.
               </p>
@@ -268,6 +272,8 @@ export default function InternalPage() {
               <h3 className="text-lg font-bold text-text-dark mb-3">검사 안내</h3>
               <p className="text-text-gray text-sm leading-relaxed">
                 항문으로 대장내시경을 삽입하여 직장, S상 결장, 대장 및 맹장, 회장 말단부를 관찰합니다.
+                대장은 여러 번 구부러져 있고 검사 중 공기를 주입하므로 통증이나 불쾌감이 발생할 수 있어,
+                <strong className="text-text-dark"> 검사 전 미리 진통제와 수면제</strong>를 맞고 시작합니다.
                 대장 용종, 염증 변화 등을 발견 및 처치하며, 암이 의심되는 경우 상급병원으로 전원합니다.
               </p>
             </div>
@@ -512,8 +518,13 @@ export default function InternalPage() {
               { time: "전날 저녁 7시", action: "둘코락스 2알 복용" },
               { time: "전날 저녁 8시", action: "먼저 물 한 컵(300ml)을 마신 후, 오라팡 14정을 1~2정씩 나누어 물(약 500ml)과 함께 30분 동안 천천히 복용 → 이후 물 1L 이상 충분히 드신 후 수면" },
               ...(prepTime === "am"
-                ? [{ time: "당일 새벽 5시", action: "같은 방법으로 오라팡 14정을 물과 함께 30분 동안 복용 → 이후 물 1L 이상 충분히 드신 후 내원 (혈압약은 새벽 4시에 복용)" }]
-                : [{ time: "당일 오전 7시", action: "같은 방법으로 오라팡 14정을 물과 함께 30분 동안 복용 → 이후 물 1L 이상 충분히 드신 후 내원" }]
+                ? [
+                    { time: "당일 새벽 4시", action: "혈압약 복용자만 — 혈압약 복용 (소량의 물과 함께)" },
+                    { time: "당일 새벽 5시", action: "먼저 물 두 컵(600ml)을 마신 후, 오라팡 14정을 1~2정씩 나누어 물(약 500ml)과 함께 30분 동안 천천히 복용. 마지막으로 가스콜 복용 → 이후 물 1L 이상 충분히 드시고 예약 시간에 늦지 않게 내원" },
+                  ]
+                : [
+                    { time: "당일 오전 7시", action: "먼저 물 두 컵(600ml)을 마신 후, 오라팡 14정을 1~2정씩 나누어 물(약 500ml)과 함께 30분 동안 천천히 복용. 마지막으로 가스콜 복용 → 이후 물 1L 이상 충분히 드시고 예약 시간에 늦지 않게 내원" },
+                  ]
               ),
             ].map((step, idx, arr) => (
               <div key={idx} className="flex gap-4 mb-0">

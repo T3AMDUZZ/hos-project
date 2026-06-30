@@ -31,7 +31,7 @@ export default function DirectionsPage() {
         {/* 지도 */}
         <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm mb-10">
           <iframe
-            src="https://maps.google.com/maps?q=%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C+%EB%8F%99%EA%B5%AC+%EB%B3%B4%EB%AC%B8%EB%A1%9C+4&t=m&z=16&output=embed&iwloc=near"
+            src="https://maps.google.com/maps?q=%EB%8C%80%EC%A0%84+%EC%84%B1%EB%AA%A8%EC%98%81%EC%83%81%EC%9D%98%ED%95%99%EA%B3%BC&t=m&z=17&output=embed&iwloc=near"
             width="100%"
             height="450"
             style={{ border: 0 }}
@@ -63,7 +63,7 @@ export default function DirectionsPage() {
           {/* 지도 앱 연결 버튼 */}
           <div className="flex flex-wrap gap-3">
             <a
-              href="https://map.kakao.com/link/search/대전광역시 동구 보문로 4"
+              href="https://map.kakao.com/link/to/성모영상의학과,36.3151355,127.4400577"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-[#FEE500] text-[#391B1B] text-base font-semibold rounded-lg hover:brightness-95 transition-all"
@@ -71,10 +71,10 @@ export default function DirectionsPage() {
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 3C6.48 3 2 6.58 2 10.9c0 2.78 1.8 5.22 4.52 6.6-.2.74-.72 2.68-.82 3.1-.13.52.19.51.4.37.17-.11 2.62-1.78 3.69-2.5.7.1 1.42.15 2.16.15 5.52 0 10-3.58 10-7.9S17.52 3 12 3z" />
               </svg>
-              카카오맵
+              카카오맵 길찾기
             </a>
             <a
-              href="https://map.naver.com/p/search/대전광역시 동구 보문로 4"
+              href="https://map.naver.com/p/directions/-/127.4400577,36.3151355,성모영상의학과,,PLACE_POI/-/car"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-[#03C75A] text-white text-base font-semibold rounded-lg hover:brightness-95 transition-all"
@@ -82,10 +82,10 @@ export default function DirectionsPage() {
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M16.273 12.845 7.376 0H0v24h7.727V11.156L16.624 24H24V0h-7.727z" />
               </svg>
-              네이버맵
+              네이버맵 길찾기
             </a>
             <a
-              href="https://maps.google.com/?q=대전광역시 동구 보문로 4"
+              href="https://www.google.com/maps/dir/?api=1&destination=대전 성모영상의학과&destination_place_id="
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-200 text-text-dark text-base font-semibold rounded-lg hover:bg-gray-50 transition-all"
@@ -94,7 +94,7 @@ export default function DirectionsPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
-              구글맵
+              구글맵 길찾기
             </a>
           </div>
         </div>
