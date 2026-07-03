@@ -1,17 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #FFCC99;
-  --primary-dark: #F0B880;
-  --primary-light: #FFE0C4;
-  --secondary: #FFE8D6;
-  --accent: #5a9bc4;
-  --accent-dark: #4a8ab5;
-  --bg-light: #FFF7F1;
+  /* 메인 페이지(프레임) 톤에 맞춘 심화된 웜 팔레트 */
+  --primary: #A9661F;
+  --primary-dark: #7A4A16;
+  --primary-light: #DFA45C;
+  --secondary: #F5DFC5;
+  --accent: #2E6B6B;
+  --accent-dark: #245252;
+  --bg-light: #FBF1E7;
   --bg-white: #ffffff;
-  --text-dark: #1e1e1e;
-  --text-gray: #666666;
-  --text-light: #999999;
+  --text-dark: #241d18;
+  --text-gray: #5c5148;
+  --text-light: #8c7c6c;
 }
 
 @theme inline {
@@ -82,5 +83,5 @@ label {
 
 /* Sub-page header */
 .page-banner {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, #E0A870 100%);
+  background: linear-gradient(135deg, #A9661F 0%, #7A4A16 55%, #3E2610 100%);
 }
