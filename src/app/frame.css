@@ -1,0 +1,224 @@
+/* ============================================================
+   성모영상의학과 — 공용 프레임 CSS (참고 index.html 이식본)
+   · 헤더/푸터/홈 본문에서 공통 사용
+   · 모든 선택자는 .smx 하위로 스코프하여 서브페이지(Tailwind) 콘텐츠와 격리
+   · 색상: 성모 브랜드(피치 #FFCC99 주도 + 블루 #5a9bc4 포인트)
+   ============================================================ */
+.smx{
+  --c-50:#FBF1E7; --c-100:#F5DFC5; --c-200:#EBC493; --c-300:#DFA45C;
+  --c-400:#CC8636; --c-500:#A9661F; --c-600:#7A4A16; --c-700:#5C3813;
+  --c-800:#3E2610; --c-900:#28180A;
+  --ink:#241d18; --ink-2:#544639; --ink-3:#8c7c6c;
+  --line:#e4d3bf; --line-2:#efe1d0; --bg:#ffffff; --bg-soft:#F9EFE2;
+  --container:1240px;
+  --ease:cubic-bezier(.25,.46,.45,.94);
+  --blue:#5a9bc4; --blue-dark:#4a8ab5;
+  color:var(--ink);line-height:1.5;letter-spacing:-.01em;
+}
+.smx *{box-sizing:border-box}
+.smx a{color:inherit;text-decoration:none}
+.smx button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.smx ul,.smx li{list-style:none;margin:0;padding:0}
+.smx img,.smx svg{display:block;max-width:100%}
+.smx h1,.smx h2,.smx h3,.smx h4,.smx p{margin:0}
+.smx .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);border:0}
+.smx .container{width:100%;max-width:var(--container);margin:0 auto;padding:0 24px}
+.smx .skip a{position:absolute;left:-9999px;top:0;z-index:9999;background:var(--c-700);color:#fff;padding:10px 18px}
+.smx .skip a:focus{left:0}
+
+/* 상단 유틸 바 */
+.smx .utilbar{background:#fff;border-bottom:1px solid var(--line)}
+.smx .utilbar .container{display:flex;justify-content:flex-end;align-items:center;height:36px;font-size:13px;color:var(--ink-2)}
+.smx .utilbar a{padding:0 13px;color:var(--ink-2);position:relative}
+.smx .utilbar a:hover{color:var(--c-600)}
+.smx .utilbar a+a::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:11px;background:var(--line)}
+
+/* 헤더 / GNB */
+.smx .header{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid var(--line)}
+.smx .gnb-row{display:flex;align-items:center;height:78px;gap:40px}
+.smx .logo{display:flex;align-items:center;gap:11px;flex:none}
+.smx .logo img{width:44px;height:44px;object-fit:contain}
+.smx .logo .txt b{display:block;font-size:19px;font-weight:800;color:var(--c-600);letter-spacing:-.03em;line-height:1.1}
+.smx .logo .txt span{font-size:10.5px;color:var(--ink-3);letter-spacing:.14em;font-weight:600}
+
+.smx .gnb{flex:1;align-self:stretch}
+.smx .gnb > ul{display:flex;height:100%;justify-content:center}
+.smx .gnb > ul > li{position:static}
+.smx .gnb > ul > li > a{display:flex;align-items:center;height:100%;padding:0 26px;font-size:17px;font-weight:700;color:var(--ink);position:relative;white-space:nowrap}
+.smx .gnb > ul > li > a::after{content:"";position:absolute;left:26px;right:26px;bottom:-1px;height:3px;background:var(--c-500);transform:scaleX(0);transition:transform .25s var(--ease)}
+.smx .gnb > ul > li:hover > a{color:var(--c-600)}
+.smx .gnb > ul > li:hover > a::after{transform:scaleX(1)}
+
+.smx .mega{position:absolute;left:0;right:0;top:100%;background:#fff;border-top:1px solid var(--c-500);border-bottom:1px solid var(--line);
+  box-shadow:0 16px 24px -18px rgba(51,36,26,.4);opacity:0;visibility:hidden;transition:.2s var(--ease);pointer-events:none}
+.smx .gnb > ul > li:hover .mega{opacity:1;visibility:visible;pointer-events:auto}
+.smx .mega .inner{display:grid;grid-template-columns:260px 1fr;padding:0}
+.smx .mega .lead{background:var(--c-700);color:#fff;padding:34px 28px}
+.smx .mega .lead .slogan{font-size:12px;letter-spacing:.14em;color:var(--c-300);font-weight:700}
+.smx .mega .lead h3{font-size:21px;font-weight:800;margin-top:10px;letter-spacing:-.03em;line-height:1.32}
+.smx .mega .lead p{color:#e7d3c0;font-size:13px;margin-top:12px;line-height:1.6}
+.smx .mega .links{padding:30px 28px 34px;border-left:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);gap:6px 20px;align-content:start}
+.smx .mega .links a{display:block;padding:9px 0;font-size:14.5px;color:var(--ink-2);border-bottom:1px solid var(--line-2)}
+.smx .mega .links a:hover{color:var(--c-600);font-weight:600}
+
+.smx .header-tools{display:flex;align-items:center;gap:0;flex:none;margin-left:auto;border-left:1px solid var(--line)}
+.smx .btn-reserve{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 22px;background:var(--c-600);color:#fff;font-weight:700;font-size:15px}
+.smx .btn-reserve:hover{background:var(--c-700)}
+.smx .btn-reserve svg{width:17px;height:17px}
+.smx .hamb{display:none;width:54px;height:42px;place-items:center;color:var(--c-700);border-left:1px solid var(--line)}
+.smx .hamb svg{width:24px;height:24px}
+
+/* 모바일 드로어 */
+.smx .drawer-scrim{position:fixed;inset:0;background:rgba(51,36,26,.34);z-index:499}
+.smx .drawer{position:fixed;top:0;right:0;z-index:500;width:300px;max-width:82vw;height:100%;background:#fff;box-shadow:-8px 0 30px -12px rgba(51,36,26,.4);display:flex;flex-direction:column;overflow-y:auto}
+.smx .drawer-head{display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:64px;background:var(--c-700);color:#fff;flex:none}
+.smx .drawer-head b{font-size:16px;font-weight:800}
+.smx .drawer-head button{color:#fff;width:36px;height:36px;display:grid;place-items:center}
+.smx .drawer-head button svg{width:20px;height:20px}
+.smx .dgroup{border-bottom:1px solid var(--line)}
+.smx .dgroup-t{display:flex;align-items:center;justify-content:space-between;width:100%;padding:16px 20px;font-size:16px;font-weight:700;color:var(--ink)}
+.smx .dgroup-t svg{width:18px;height:18px;transition:transform .2s var(--ease);color:var(--ink-3);flex:none}
+.smx .dgroup-t.on svg{transform:rotate(180deg)}
+.smx .dgroup-t.on{color:var(--c-600)}
+.smx .dsub{background:var(--bg-soft);padding:4px 0 10px;border-top:1px solid var(--line)}
+.smx .dsub a{display:block;padding:10px 20px 10px 30px;font-size:14.5px;color:var(--ink-2)}
+.smx .dsub a:hover{color:var(--c-600)}
+.smx .drawer-tel{margin-top:auto;border-top:1px solid var(--line);padding:18px 20px;background:var(--c-50)}
+.smx .drawer-tel .k{font-size:12.5px;color:var(--ink-2);font-weight:600}
+.smx .drawer-tel .v{display:block;font-size:20px;font-weight:800;color:var(--c-700);margin-top:2px}
+
+/* 메인 비주얼 */
+.smx .visual{position:relative;height:460px;background:var(--c-800);overflow:hidden}
+.smx .visual .bg{position:absolute;inset:0;background:
+   linear-gradient(90deg,rgba(51,36,26,.9) 0%,rgba(51,36,26,.6) 48%,rgba(74,50,32,.3) 100%),
+   url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1680&q=80&auto=format&fit=crop') center/cover no-repeat,
+   var(--c-800);}
+.smx .visual .container{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center}
+.smx .visual .slogan{color:#fff;font-size:clamp(32px,4.4vw,52px);font-weight:800;line-height:1.2;letter-spacing:-.035em}
+.smx .visual .desc{color:#f0e2d4;font-size:18px;margin-top:18px;line-height:1.6}
+.smx .visual .vbtns{display:flex;gap:10px;margin-top:34px;flex-wrap:wrap}
+.smx .visual .vbtns a{display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 26px;font-size:16px;font-weight:700}
+.smx .visual .vbtns .primary{background:#fff;color:var(--c-700)}
+.smx .visual .vbtns .primary:hover{background:var(--c-50)}
+.smx .visual .vbtns .ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)}
+.smx .visual .vbtns .ghost:hover{background:rgba(255,255,255,.12)}
+.smx .visual .vbtns svg{width:18px;height:18px}
+
+/* 아이콘 바로가기 */
+.smx .shortcut{border-bottom:1px solid var(--line);background:#fff}
+.smx .shortcut ul{display:grid;grid-template-columns:repeat(6,1fr)}
+.smx .shortcut li{border-left:1px solid var(--line)}
+.smx .shortcut li:last-child{border-right:1px solid var(--line)}
+.smx .shortcut a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:13px;padding:34px 10px;text-align:center;transition:background .2s}
+.smx .shortcut a:hover{background:var(--bg-soft)}
+.smx .shortcut .ic{width:52px;height:52px;display:grid;place-items:center;color:var(--c-500);transition:.2s}
+.smx .shortcut a:hover .ic{color:var(--c-700)}
+.smx .shortcut .ic svg{width:32px;height:32px}
+.smx .shortcut b{font-size:15px;font-weight:700;color:var(--ink)}
+
+/* 섹션 공통 */
+.smx .section{padding:72px 0}
+.smx .section.alt{background:var(--bg-soft)}
+.smx .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:30px;padding-bottom:18px;border-bottom:2px solid var(--c-800)}
+.smx .sec-head h2{font-size:27px;font-weight:800;color:var(--c-800);letter-spacing:-.03em;display:flex;align-items:center;gap:11px}
+.smx .sec-head h2 .bar{width:5px;height:24px;background:var(--c-500)}
+.smx .sec-head p{color:var(--ink-3);font-size:14.5px;margin-top:8px;padding-left:16px}
+
+/* info 박스 */
+.smx .info-list{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-right:0}
+.smx .info-list .box{border-right:1px solid var(--line);padding:30px 26px 26px;display:flex;flex-direction:column;background:#fff;transition:background .2s}
+.smx .info-list .box:hover{background:var(--bg-soft)}
+.smx .info-list .box .tit{font-size:18px;font-weight:800;color:var(--c-800);letter-spacing:-.02em;display:flex;align-items:center;gap:9px}
+.smx .info-list .box .tit .n{width:26px;height:26px;background:var(--c-50);color:var(--c-600);font-size:13px;font-weight:800;display:grid;place-items:center}
+.smx .info-list .box .desc{font-size:14px;color:var(--ink-2);margin-top:14px;line-height:1.62;flex:1}
+.smx .info-list .box .desc strong{color:var(--c-700);font-weight:700}
+.smx .info-list .box .btns{display:flex;gap:7px;margin-top:20px;flex-wrap:wrap}
+.smx .info-list .box .btns a{flex:1;min-width:0;display:inline-flex;align-items:center;justify-content:center;gap:6px;height:42px;padding:0 12px;font-size:13.5px;font-weight:700;border:1px solid var(--c-300);color:var(--c-700);white-space:nowrap;transition:.2s}
+.smx .info-list .box .btns a:hover{background:var(--c-600);border-color:var(--c-600);color:#fff}
+.smx .info-list .box .btns a.full{flex-basis:100%}
+.smx .info-list .box .btns a svg{width:14px;height:14px}
+
+/* quick_link 타일 */
+.smx .qlink{margin-top:0;border:1px solid var(--line);border-top:0;display:grid;grid-template-columns:repeat(7,1fr)}
+.smx .qlink a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px 8px;text-align:center;border-left:1px solid var(--line);transition:background .2s}
+.smx .qlink a:first-child{border-left:0}
+.smx .qlink a:hover{background:var(--bg-soft)}
+.smx .qlink .ic{width:38px;height:38px;display:grid;place-items:center;color:var(--c-500)}
+.smx .qlink .ic svg{width:26px;height:26px}
+.smx .qlink em{font-style:normal;font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.4}
+
+/* 진료시간 / 연락처 박스 */
+.smx .info-2{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.smx .aside-box{border:1px solid var(--line);background:#fff;display:flex;flex-direction:column}
+.smx .aside-box .ab-head{background:var(--c-700);color:#fff;padding:18px 22px;display:flex;align-items:center;gap:10px}
+.smx .aside-box .ab-head svg{width:20px;height:20px}
+.smx .aside-box .ab-head b{font-size:17px;font-weight:800;letter-spacing:-.02em}
+.smx .aside-box .rows{padding:6px 22px}
+.smx .aside-box .row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:13px 0;border-bottom:1px dashed var(--line)}
+.smx .aside-box .row:last-child{border-bottom:0}
+.smx .aside-box .row .d{font-size:14px;color:var(--ink-2);font-weight:600;flex:none}
+.smx .aside-box .row .t{font-size:14px;color:var(--ink);font-weight:700;text-align:right}
+.smx .aside-box .row .t.off{color:var(--c-400)}
+.smx .aside-box .tel{margin-top:auto;border-top:1px solid var(--line)}
+.smx .aside-box .tel a{display:block;padding:18px 20px}
+.smx .aside-box .tel a:hover{background:var(--bg-soft)}
+.smx .aside-box .tel .k{display:block;font-size:12.5px;color:var(--ink-2);font-weight:600}
+.smx .aside-box .tel .v{display:block;font-size:22px;font-weight:800;color:var(--c-700);margin-top:3px;letter-spacing:-.02em}
+.smx .aside-box .tel .v.sm{font-size:16px;font-weight:700;line-height:1.4}
+
+/* 푸터 */
+.smx .footer{background:var(--c-900);color:#d8c4b2}
+.smx .footmain{padding:42px 0 50px}
+.smx .footmain .top{display:flex;justify-content:space-between;gap:36px;flex-wrap:wrap}
+.smx .footmain .flogo{display:flex;align-items:center;gap:11px}
+.smx .footmain .flogo img{width:40px;height:40px;object-fit:contain}
+.smx .footmain .flogo b{font-size:18px;font-weight:800;color:#fff;letter-spacing:-.02em;line-height:1}
+.smx .footmain .flinks{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center}
+.smx .footmain .flinks a{font-size:14px;color:#e0cdba}
+.smx .footmain .flinks a:hover{color:#fff}
+.smx .footmain .flinks a.strong{color:#fff;font-weight:700}
+.smx .footmain address{font-style:normal;margin-top:26px;font-size:13.5px;line-height:1.9;color:#bda78f}
+.smx .footmain address .sp{margin:0 9px;opacity:.4}
+.smx .footmain .copy{margin-top:16px;font-size:12.5px;color:#a08c74}
+
+/* TOP 버튼 */
+.smx .floating{position:fixed;right:24px;bottom:24px;z-index:400;width:104px}
+.smx .btn-top{width:100%;height:42px;background:#fff;border:1px solid var(--line);color:var(--c-700);display:flex;align-items:center;justify-content:center;gap:6px;font-size:12.5px;font-weight:700;transition:.25s var(--ease)}
+.smx .btn-top:hover{background:var(--c-50)}
+.smx .btn-top svg{width:15px;height:15px}
+
+/* 반응형 */
+@media (max-width:1100px){
+  .smx .mega .links{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:1024px){
+  .smx .gnb{display:none}
+  .smx .hamb{display:grid}
+}
+@media (max-width:920px){
+  .smx .btn-reserve span{display:none}
+  .smx .info-list{grid-template-columns:1fr 1fr}
+  .smx .info-list .box:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .smx .qlink{grid-template-columns:repeat(4,1fr)}
+  .smx .qlink a:nth-child(n+5){border-top:1px solid var(--line)}
+  .smx .shortcut ul{grid-template-columns:repeat(3,1fr)}
+  .smx .shortcut li:nth-child(n+4) a{border-top:1px solid var(--line)}
+}
+@media (max-width:760px){
+  .smx .container{padding:0 18px}
+  .smx .section{padding:52px 0}
+  .smx .visual{height:400px}
+  .smx .shortcut ul{grid-template-columns:repeat(2,1fr)}
+  .smx .shortcut li:nth-child(n+3) a{border-top:1px solid var(--line)}
+  .smx .qlink{grid-template-columns:repeat(2,1fr)}
+  .smx .qlink a:nth-child(n+3){border-top:1px solid var(--line)}
+  .smx .qlink a:nth-child(2n+1){border-left:0}
+  .smx .info-list{grid-template-columns:1fr}
+  .smx .info-list .box{border-bottom:1px solid var(--line)}
+  .smx .info-2{grid-template-columns:1fr}
+  .smx .sec-head{flex-direction:column;align-items:flex-start}
+  .smx .floating{right:16px;bottom:16px}
+}
+@media (max-width:480px){
+  .smx .visual .vbtns{flex-direction:column;align-items:flex-start}
+}

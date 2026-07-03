@@ -1,5 +1,5 @@
-import FullpageHome from "@/components/FullpageHome";
+import SungmoHome from "@/components/SungmoHome";
 
 export default function Home() {
-  return <FullpageHome />;
+  return <SungmoHome />;
 }

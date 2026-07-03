@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./frame.css";
 import LayoutShell from "@/components/LayoutShell";
 
 export const metadata: Metadata = {
