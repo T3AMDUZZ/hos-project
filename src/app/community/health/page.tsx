@@ -76,7 +76,7 @@ export default function HealthArticlesPage() {
           {articles.map((article) => (
             <div
               key={article.id}
-              className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md transition-shadow cursor-pointer"
+              className="bg-white rounded-xl border border-gray-200 p-6"
             >
               <div className="flex items-center gap-2 mb-3">
                 <span className="inline-block bg-primary/10 text-primary text-xs font-semibold px-2.5 py-1 rounded-full">
@@ -90,28 +90,6 @@ export default function HealthArticlesPage() {
               </p>
             </div>
           ))}
-        </div>
-
-        {/* 페이지네이션 플레이스홀더 */}
-        <div className="flex justify-center items-center gap-2 mt-8">
-          <button className="w-9 h-9 rounded-lg border border-gray-200 text-sm text-text-light hover:border-primary hover:text-primary transition-colors">
-            &lt;
-          </button>
-          {[1, 2].map((page) => (
-            <button
-              key={page}
-              className={`w-9 h-9 rounded-lg text-sm font-medium transition-colors ${
-                page === 1
-                  ? "bg-primary text-white"
-                  : "border border-gray-200 text-text-light hover:border-primary hover:text-primary"
-              }`}
-            >
-              {page}
-            </button>
-          ))}
-          <button className="w-9 h-9 rounded-lg border border-gray-200 text-sm text-text-light hover:border-primary hover:text-primary transition-colors">
-            &gt;
-          </button>
         </div>
       </div>
     </>

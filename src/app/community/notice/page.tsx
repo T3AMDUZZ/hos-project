@@ -38,7 +38,7 @@ export default function NoticePage() {
             </thead>
             <tbody className="divide-y divide-gray-100">
               {notices.map((notice) => (
-                <tr key={notice.id} className="hover:bg-bg-light/50 cursor-pointer">
+                <tr key={notice.id} className="hover:bg-bg-light/50">
                   <td className="text-center px-4 py-3 text-sm text-text-light">
                     {notice.important ? (
                       <span className="inline-block bg-primary text-white text-xs font-bold px-2 py-0.5 rounded">
@@ -60,28 +60,6 @@ export default function NoticePage() {
               ))}
             </tbody>
           </table>
-        </div>
-
-        {/* 페이지네이션 플레이스홀더 */}
-        <div className="flex justify-center items-center gap-2 mt-8">
-          <button className="w-9 h-9 rounded-lg border border-gray-200 text-sm text-text-light hover:border-primary hover:text-primary transition-colors">
-            &lt;
-          </button>
-          {[1, 2, 3].map((page) => (
-            <button
-              key={page}
-              className={`w-9 h-9 rounded-lg text-sm font-medium transition-colors ${
-                page === 1
-                  ? "bg-primary text-white"
-                  : "border border-gray-200 text-text-light hover:border-primary hover:text-primary"
-              }`}
-            >
-              {page}
-            </button>
-          ))}
-          <button className="w-9 h-9 rounded-lg border border-gray-200 text-sm text-text-light hover:border-primary hover:text-primary transition-colors">
-            &gt;
-          </button>
         </div>
       </div>
     </>
