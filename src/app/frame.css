@@ -160,11 +160,11 @@
 .smx .aside-box .row .t{font-size:14px;color:var(--ink);font-weight:700;text-align:right}
 .smx .aside-box .row .t.off{color:var(--c-400)}
 .smx .aside-box .tel{margin-top:auto;border-top:1px solid var(--line)}
-.smx .aside-box .tel a{display:block;padding:18px 20px}
+.smx .aside-box .tel a{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px}
 .smx .aside-box .tel a:hover{background:var(--bg-soft)}
-.smx .aside-box .tel .k{display:block;font-size:12.5px;color:var(--ink-2);font-weight:600}
-.smx .aside-box .tel .v{display:block;font-size:22px;font-weight:800;color:var(--c-700);margin-top:3px;letter-spacing:-.02em}
-.smx .aside-box .tel .v.sm{font-size:16px;font-weight:700;line-height:1.4}
+.smx .aside-box .tel .k{font-size:13px;color:var(--ink-2);font-weight:600;flex:none}
+.smx .aside-box .tel .v{font-size:22px;font-weight:800;color:var(--c-700);letter-spacing:-.02em;text-align:right}
+.smx .aside-box .tel .v.sm{font-size:15px;font-weight:700;line-height:1.4}
 
 /* 푸터 */
 .smx .footer{background:var(--c-900);color:#d8c4b2}
