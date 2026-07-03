@@ -38,7 +38,6 @@ const menuItems = [
       { title: "국가 5대암검진", href: "/checkup/cancer" },
       { title: "채용검진 및 보건증", href: "/checkup/employment" },
       { title: "학생검진", href: "/checkup/student" },
-      { title: "출장검진", href: "/checkup/onsite" },
     ],
   },
   {
@@ -65,7 +64,6 @@ const menuItems = [
     sub: [
       { title: "공지사항", href: "/community/notice" },
       { title: "건강상식", href: "/community/health" },
-      { title: "쉼터", href: "/community/rest" },
     ],
   },
 ];

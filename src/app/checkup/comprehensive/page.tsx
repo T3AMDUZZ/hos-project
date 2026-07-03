@@ -34,7 +34,7 @@ const prepSameDay = [
 
 type Column = "A" | "B" | "C" | "F" | "ref";
 const cols: { key: Column; label: string; sub?: string }[] = [
-  { key: "ref", label: "의뢰", sub: "(☆)" },
+  { key: "ref", label: "의뢰" },
   { key: "A", label: "A형" },
   { key: "B", label: "B형" },
   { key: "C", label: "C형" },
@@ -128,7 +128,7 @@ const examGroups: ExamGroup[] = [
     ],
   },
   {
-    category: "의뢰 선택 항목 (☆)",
+    category: "의뢰 선택 항목",
     rows: [
       { name: "CRP (염증)", cols: { ref: true, B: true, C: true, F: true } },
       { name: "RA factor (류마티스)", cols: { ref: true, B: true, C: true, F: true } },
@@ -438,7 +438,7 @@ export default function ComprehensivePage() {
         </div>
 
         <p className="mt-6 text-xs text-text-light">
-          * ☆ 표시는 의뢰 선택 항목이며, 필요에 따라 추가 가능합니다.
+          * 의뢰 선택 항목은 필요에 따라 추가 가능합니다.
         </p>
       </section>
 

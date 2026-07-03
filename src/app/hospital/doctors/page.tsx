@@ -35,7 +35,7 @@ const doctors = [
     color: "primary",
   },
   {
-    room: "출장검진",
+    room: "건강검진",
     name: "신정순",
     specialty: "외과 전문의",
     education: ["전북대학교 의과대학 졸업"],

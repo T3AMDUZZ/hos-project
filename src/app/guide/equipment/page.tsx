@@ -124,14 +124,6 @@ const equipments: Equipment[] = [
     purpose: "내시경 세척 및 멸균",
     category: "support",
   },
-  {
-    name: "검진용 차량",
-    model: "45인승 승합차",
-    country: "KOREA",
-    qty: "2대",
-    purpose: "이동식 출장 검진",
-    category: "support",
-  },
 ];
 
 const cancerEquipment = [
