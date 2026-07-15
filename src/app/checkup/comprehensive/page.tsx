@@ -218,7 +218,7 @@ export default function ComprehensivePage() {
               key={idx}
               className={`rounded-2xl p-6 border transition-all ${
                 idx === 1
-                  ? "bg-primary text-white border-primary shadow-lg"
+                  ? "bg-primary text-white border-primary shadow-sm"
                   : "bg-white border-gray-100 hover:border-primary/30 hover:shadow-md"
               }`}
             >

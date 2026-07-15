@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  /* 메인 페이지(프레임) 톤에 맞춘 심화된 웜 팔레트 */
-  --primary: #A9661F;
-  --primary-dark: #7A4A16;
-  --primary-light: #DFA45C;
-  --secondary: #F5DFC5;
-  --accent: #2E6B6B;
-  --accent-dark: #245252;
-  --bg-light: #FBF1E7;
+  /* index.html 디자인 채용 — 슬레이트 블루 한 계열 + 중립색 */
+  --primary: #35546B;
+  --primary-dark: #2D4658;
+  --primary-light: #5F809B;
+  --secondary: #D8E1EA;
+  --accent: #436680;
+  --accent-dark: #35546B;
+  --bg-light: #f4f6f9;
   --bg-white: #ffffff;
-  --text-dark: #241d18;
-  --text-gray: #5c5148;
-  --text-light: #8c7c6c;
+  --text-dark: #222a30;
+  --text-gray: #4a565f;
+  --text-light: #7b8893;
 }
 
 @theme inline {
@@ -36,7 +36,7 @@ html {
 body {
   font-family: "Noto Sans KR", "Pretendard", -apple-system, sans-serif;
   color: var(--text-dark);
-  background: var(--bg-light);
+  background: var(--bg-white);
   line-height: 1.7;
 }
 
@@ -81,7 +81,8 @@ label {
   transform: translateY(0);
 }
 
-/* Sub-page header */
+/* Sub-page header — index.html 톤에 맞춘 플랫 밴드 (그라데이션·진한 배경 배제) */
 .page-banner {
-  background: linear-gradient(135deg, #A9661F 0%, #7A4A16 55%, #3E2610 100%);
+  background: var(--bg-light);
+  border-bottom: 1px solid #dde3e9;
 }

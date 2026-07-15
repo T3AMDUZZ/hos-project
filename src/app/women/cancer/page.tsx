@@ -90,7 +90,7 @@ export default function WomenCancerPage() {
 
               <div className="grid md:grid-cols-2 gap-8">
                 {/* 해부학적 이미지 플레이스홀더 */}
-                <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl aspect-[4/3] flex flex-col items-center justify-center">
+                <div className="bg-primary/5 rounded-xl aspect-[4/3] flex flex-col items-center justify-center">
                   <svg
                     className="w-16 h-16 text-primary/30 mb-3"
                     fill="none"

@@ -1,18 +1,18 @@
 /* ============================================================
-   성모영상의학과 — 공용 프레임 CSS (참고 index.html 이식본)
+   성모영상의학과 — 공용 프레임 CSS (index.html 디자인 채용)
    · 헤더/푸터/홈 본문에서 공통 사용
    · 모든 선택자는 .smx 하위로 스코프하여 서브페이지(Tailwind) 콘텐츠와 격리
-   · 색상: 성모 브랜드(피치 #FFCC99 주도 + 블루 #5a9bc4 포인트)
+   · 색상: index.html 슬레이트 블루 한 계열 + 중립색
    ============================================================ */
 .smx{
-  --c-50:#FBF1E7; --c-100:#F5DFC5; --c-200:#EBC493; --c-300:#DFA45C;
-  --c-400:#CC8636; --c-500:#A9661F; --c-600:#7A4A16; --c-700:#5C3813;
-  --c-800:#3E2610; --c-900:#28180A;
-  --ink:#241d18; --ink-2:#544639; --ink-3:#8c7c6c;
-  --line:#e4d3bf; --line-2:#efe1d0; --bg:#ffffff; --bg-soft:#F9EFE2;
+  --c-50:#EEF2F6; --c-100:#D8E1EA; --c-200:#B3C4D3; --c-300:#88A3B8;
+  --c-400:#5F809B; --c-500:#436680; --c-600:#35546B; --c-700:#2D4658;
+  --c-800:#283A49; --c-900:#1F2D38;
+  --ink:#222a30; --ink-2:#4a565f; --ink-3:#7b8893;
+  --line:#dde3e9; --line-2:#e9edf1; --bg:#ffffff; --bg-soft:#f4f6f9;
   --container:1240px;
   --ease:cubic-bezier(.25,.46,.45,.94);
-  --blue:#5a9bc4; --blue-dark:#4a8ab5;
+  --blue:#436680; --blue-dark:#35546B;
   color:var(--ink);line-height:1.5;letter-spacing:-.01em;
 }
 .smx *{box-sizing:border-box}
@@ -50,13 +50,13 @@
 .smx .gnb > ul > li:hover > a::after{transform:scaleX(1)}
 
 .smx .mega{position:absolute;left:0;right:0;top:100%;background:#fff;border-top:1px solid var(--c-500);border-bottom:1px solid var(--line);
-  box-shadow:0 16px 24px -18px rgba(51,36,26,.4);opacity:0;visibility:hidden;transition:.2s var(--ease);pointer-events:none}
+  box-shadow:0 16px 24px -18px rgba(31,45,56,.4);opacity:0;visibility:hidden;transition:.2s var(--ease);pointer-events:none}
 .smx .gnb > ul > li:hover .mega{opacity:1;visibility:visible;pointer-events:auto}
 .smx .mega .inner{display:grid;grid-template-columns:260px 1fr;padding:0}
 .smx .mega .lead{background:var(--c-700);color:#fff;padding:34px 28px}
 .smx .mega .lead .slogan{font-size:12px;letter-spacing:.14em;color:var(--c-300);font-weight:700}
 .smx .mega .lead h3{font-size:21px;font-weight:800;margin-top:10px;letter-spacing:-.03em;line-height:1.32}
-.smx .mega .lead p{color:#e7d3c0;font-size:13px;margin-top:12px;line-height:1.6}
+.smx .mega .lead p{color:#bcc8d2;font-size:13px;margin-top:12px;line-height:1.6}
 .smx .mega .links{padding:30px 28px 34px;border-left:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);gap:6px 20px;align-content:start}
 .smx .mega .links a{display:block;padding:9px 0;font-size:14.5px;color:var(--ink-2);border-bottom:1px solid var(--line-2)}
 .smx .mega .links a:hover{color:var(--c-600);font-weight:600}
@@ -69,8 +69,8 @@
 .smx .hamb svg{width:24px;height:24px}
 
 /* 모바일 드로어 */
-.smx .drawer-scrim{position:fixed;inset:0;background:rgba(51,36,26,.34);z-index:499}
-.smx .drawer{position:fixed;top:0;right:0;z-index:500;width:300px;max-width:82vw;height:100%;background:#fff;box-shadow:-8px 0 30px -12px rgba(51,36,26,.4);display:flex;flex-direction:column;overflow-y:auto}
+.smx .drawer-scrim{position:fixed;inset:0;background:rgba(31,45,56,.34);z-index:499}
+.smx .drawer{position:fixed;top:0;right:0;z-index:500;width:300px;max-width:82vw;height:100%;background:#fff;box-shadow:-8px 0 30px -12px rgba(31,45,56,.4);display:flex;flex-direction:column;overflow-y:auto}
 .smx .drawer-head{display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:64px;background:var(--c-700);color:#fff;flex:none}
 .smx .drawer-head b{font-size:16px;font-weight:800}
 .smx .drawer-head button{color:#fff;width:36px;height:36px;display:grid;place-items:center}
@@ -90,12 +90,12 @@
 /* 메인 비주얼 */
 .smx .visual{position:relative;height:460px;background:var(--c-800);overflow:hidden}
 .smx .visual .bg{position:absolute;inset:0;background:
-   linear-gradient(90deg,rgba(51,36,26,.9) 0%,rgba(51,36,26,.6) 48%,rgba(74,50,32,.3) 100%),
+   linear-gradient(90deg,rgba(31,45,56,.9) 0%,rgba(31,45,56,.62) 48%,rgba(40,58,73,.32) 100%),
    url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1680&q=80&auto=format&fit=crop') center/cover no-repeat,
    var(--c-800);}
 .smx .visual .container{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center}
 .smx .visual .slogan{color:#fff;font-size:clamp(32px,4.4vw,52px);font-weight:800;line-height:1.2;letter-spacing:-.035em}
-.smx .visual .desc{color:#f0e2d4;font-size:18px;margin-top:18px;line-height:1.6}
+.smx .visual .desc{color:#d3dde5;font-size:18px;margin-top:18px;line-height:1.6}
 .smx .visual .vbtns{display:flex;gap:10px;margin-top:34px;flex-wrap:wrap}
 .smx .visual .vbtns a{display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 26px;font-size:16px;font-weight:700}
 .smx .visual .vbtns .primary{background:#fff;color:var(--c-700)}
@@ -167,19 +167,19 @@
 .smx .aside-box .tel .v.sm{font-size:15px;font-weight:700;line-height:1.4}
 
 /* 푸터 */
-.smx .footer{background:var(--c-900);color:#d8c4b2}
+.smx .footer{background:var(--c-900);color:#a3b3bf}
 .smx .footmain{padding:42px 0 50px}
 .smx .footmain .top{display:flex;justify-content:space-between;gap:36px;flex-wrap:wrap}
 .smx .footmain .flogo{display:flex;align-items:center;gap:11px}
 .smx .footmain .flogo img{width:40px;height:40px;object-fit:contain}
 .smx .footmain .flogo b{font-size:18px;font-weight:800;color:#fff;letter-spacing:-.02em;line-height:1}
 .smx .footmain .flinks{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center}
-.smx .footmain .flinks a{font-size:14px;color:#e0cdba}
+.smx .footmain .flinks a{font-size:14px;color:#b8c5cf}
 .smx .footmain .flinks a:hover{color:#fff}
 .smx .footmain .flinks a.strong{color:#fff;font-weight:700}
-.smx .footmain address{font-style:normal;margin-top:26px;font-size:13.5px;line-height:1.9;color:#bda78f}
+.smx .footmain address{font-style:normal;margin-top:26px;font-size:13.5px;line-height:1.9;color:#8295a3}
 .smx .footmain address .sp{margin:0 9px;opacity:.4}
-.smx .footmain .copy{margin-top:16px;font-size:12.5px;color:#a08c74}
+.smx .footmain .copy{margin-top:16px;font-size:12.5px;color:#6c8090}
 
 /* TOP 버튼 */
 .smx .floating{position:fixed;right:24px;bottom:24px;z-index:400;width:104px}

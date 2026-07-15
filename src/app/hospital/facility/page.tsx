@@ -73,7 +73,7 @@ export default function FacilityPage() {
           {highlights.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl border border-gray-100 p-8 hover:shadow-lg hover:border-primary/30 transition-all"
+              className="bg-white rounded-2xl border border-gray-100 p-8 hover:shadow-sm hover:border-primary/30 transition-all"
             >
               <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-5">
                 <span className="text-2xl font-bold">0{idx + 1}</span>
@@ -147,23 +147,23 @@ export default function FacilityPage() {
 
         {/* 국가 일반검진 및 암검진 전문병원 */}
         <section className="mb-16">
-          <div className="bg-gradient-to-br from-primary to-primary-dark rounded-2xl p-10 text-white">
-            <p className="text-xs font-semibold tracking-widest mb-2 opacity-90">
+          <div className="bg-bg-light rounded-2xl p-10 border border-primary/10">
+            <p className="text-xs font-semibold tracking-widest mb-2 text-primary">
               FACILITY 03
             </p>
-            <h3 className="text-2xl md:text-3xl font-bold mb-6">
+            <h3 className="text-2xl md:text-3xl font-bold mb-6 text-text-dark">
               국가 일반검진 및 암검진 전문병원
             </h3>
             <div className="grid md:grid-cols-3 gap-4">
               {certifications.map((item, idx) => (
                 <div
                   key={idx}
-                  className="bg-white/15 backdrop-blur rounded-xl p-5 border border-white/20"
+                  className="bg-white rounded-xl p-5 border border-primary/10"
                 >
-                  <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center mb-3">
+                  <div className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-3">
                     <span className="font-bold text-sm">0{idx + 1}</span>
                   </div>
-                  <p className="text-sm leading-relaxed">{item}</p>
+                  <p className="text-sm leading-relaxed text-text-gray">{item}</p>
                 </div>
               ))}
             </div>
