@@ -158,7 +158,7 @@ export default function InternalPage() {
           {departments.map((dept, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-sm hover:border-primary/30 transition-all duration-300"
+              className="bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-lg hover:border-primary/30 transition-all duration-300"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
                 {dept.icon}

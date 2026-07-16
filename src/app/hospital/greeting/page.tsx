@@ -15,7 +15,7 @@ export default function GreetingPage() {
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* 원장 사진 */}
-          <div className="bg-primary/5 rounded-2xl aspect-[3/4] flex items-center justify-center">
+          <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl aspect-[3/4] flex items-center justify-center">
             <div className="text-center text-primary/40">
               <svg
                 className="w-20 h-20 mx-auto mb-3"

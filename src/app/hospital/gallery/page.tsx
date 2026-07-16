@@ -141,10 +141,10 @@ export default function GalleryPage() {
           {gallery.map((item, idx) => (
             <div
               key={idx}
-              className="group relative bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-sm hover:border-primary/30 transition-all duration-300"
+              className="group relative bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl hover:border-primary/30 transition-all duration-300"
             >
               {/* 이미지 영역 (현재는 아이콘 + 그라디언트) */}
-              <div className="relative aspect-[4/3] bg-primary/5 overflow-hidden">
+              <div className="relative aspect-[4/3] bg-gradient-to-br from-primary/15 via-primary/5 to-bg-light overflow-hidden">
                 {/* 번호 배지 */}
                 <div className="absolute top-4 left-4 z-10">
                   <span className="inline-block px-3 py-1 bg-white/90 backdrop-blur text-primary text-xs font-bold rounded-full shadow-sm">
@@ -184,7 +184,7 @@ export default function GalleryPage() {
         </div>
 
         {/* 하단 안내 */}
-        <div className="mt-16 bg-bg-light rounded-2xl p-8 md:p-10 text-center border border-primary/10">
+        <div className="mt-16 bg-gradient-to-r from-primary/10 via-bg-light to-primary/10 rounded-2xl p-8 md:p-10 text-center border border-primary/10">
           <h3 className="text-xl md:text-2xl font-bold text-text-dark mb-3">
             병원 방문 상담
           </h3>

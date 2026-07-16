@@ -189,7 +189,7 @@ export default function RadiologyPage() {
           {(xrayTab === "general" ? generalXray : specialXray).map((item, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-sm hover:border-primary/30 transition-all duration-300"
+              className="bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-lg hover:border-primary/30 transition-all duration-300"
             >
               <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 font-bold">
                 {String(idx + 1).padStart(2, "0")}
@@ -215,7 +215,7 @@ export default function RadiologyPage() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-primary/5 rounded-2xl border border-primary/10 p-8">
+          <div className="bg-gradient-to-br from-primary/5 to-white rounded-2xl border border-primary/10 p-8">
             <div className="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center mb-5">
               <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 7h16M4 12h16M4 17h10" />
@@ -228,7 +228,7 @@ export default function RadiologyPage() {
             </p>
           </div>
 
-          <div className="bg-accent/5 rounded-2xl border border-accent/10 p-8">
+          <div className="bg-gradient-to-br from-accent/5 to-white rounded-2xl border border-accent/10 p-8">
             <div className="w-12 h-12 rounded-xl bg-accent text-white flex items-center justify-center mb-5">
               <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -260,7 +260,7 @@ export default function RadiologyPage() {
           {ultrasound.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-sm hover:border-primary/30 transition-all duration-300"
+              className="bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-lg hover:border-primary/30 transition-all duration-300"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
                 {item.icon}

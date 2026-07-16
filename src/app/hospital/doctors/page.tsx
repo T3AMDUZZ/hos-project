@@ -75,11 +75,11 @@ export default function DoctorsPage() {
           {doctors.map((doc, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-sm hover:border-primary/30 transition-all"
+              className="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg hover:border-primary/30 transition-all"
             >
               <div className="grid md:grid-cols-[320px_1fr]">
                 {/* 프로필 영역 */}
-                <div className="bg-bg-light p-8 flex flex-col items-center justify-center text-center border-b md:border-b-0 md:border-r border-gray-100">
+                <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-bg-light p-8 flex flex-col items-center justify-center text-center border-b md:border-b-0 md:border-r border-gray-100">
                   <div className="w-32 h-32 rounded-full bg-white shadow-md flex items-center justify-center mb-5 border-4 border-white">
                     <svg
                       className="w-16 h-16 text-primary/40"

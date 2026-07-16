@@ -43,7 +43,7 @@ export default function DirectionsPage() {
         </div>
 
         {/* 주소 + 지도 앱 연결 */}
-        <div className="bg-bg-light rounded-2xl p-8 md:p-10 mb-10 border border-primary/10">
+        <div className="bg-gradient-to-br from-primary/10 via-bg-light to-primary/5 rounded-2xl p-8 md:p-10 mb-10 border border-primary/10">
           <div className="flex items-start gap-4 mb-6">
             <div className="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center shrink-0">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
