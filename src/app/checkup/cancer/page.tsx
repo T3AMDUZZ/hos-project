@@ -1,6 +1,6 @@
 import PageBanner from "@/components/PageBanner";
 
-export const metadata = { title: "국가 5대암검진 | 성모영상의학과" };
+export const metadata = { title: "국가 6대암검진 | 성모영상의학과" };
 
 const cancerScreenings = [
   {
@@ -33,30 +33,37 @@ const cancerScreenings = [
     cycle: "2년마다",
     method: "자궁경부세포검사(Pap Smear)",
   },
+  {
+    cancer: "폐암",
+    target: "54~74세 중 30갑년 이상 흡연력자 등 국가 기준 충족자",
+    cycle: "2년마다",
+    method: "저선량 흉부 CT검사",
+  },
 ];
 
 export default function CancerScreeningPage() {
   return (
     <>
       <PageBanner
-        title="국가 5대암검진"
+        title="국가 6대암검진"
         breadcrumb={[
           { title: "건강검진", href: "/checkup/comprehensive" },
-          { title: "국가 5대암검진" },
+          { title: "국가 6대암검진" },
         ]}
       />
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="max-w-3xl mb-12">
           <h2 className="text-2xl font-bold text-text-dark mb-4">
-            국가에서 지원하는 5대 암검진 프로그램
+            국가에서 지원하는 6대 암검진 프로그램
           </h2>
           <p className="text-text-gray leading-relaxed">
             국가암검진은 암을 조기에 발견하여 치료율을 높이기 위해 정부에서 시행하는 검진
-            프로그램입니다. 대상자에게는 무료 또는 본인부담금 10%로 검진을 받으실 수 있습니다.
+            프로그램입니다. 위·대장·간·유방·자궁경부암에 더해 2019년부터 폐암이 추가되었습니다.
+            대상자에게는 무료 또는 본인부담금 10%로 검진을 받으실 수 있습니다.
           </p>
         </div>
 
-        {/* 5대암 테이블 */}
+        {/* 6대암 테이블 */}
         <div className="bg-white rounded-xl border border-gray-200 overflow-x-auto mb-12">
           <table className="w-full">
             <thead>

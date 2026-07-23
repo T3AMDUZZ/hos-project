@@ -43,58 +43,73 @@ export default function DirectionsPage() {
         </div>
 
         {/* 주소 + 지도 앱 연결 */}
-        <div className="bg-gradient-to-br from-primary/10 via-bg-light to-primary/5 rounded-2xl p-8 md:p-10 mb-10 border border-primary/10">
+        <div className="bg-white rounded-2xl p-7 md:p-9 mb-10 border border-gray-100 shadow-[0_2px_24px_-14px_rgba(90,60,30,0.3)]">
           <div className="flex items-start gap-4 mb-6">
-            <div className="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center shrink-0">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-11 h-11 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
             <div className="flex-1">
-              <p className="text-xs text-primary font-semibold tracking-widest mb-1">ADDRESS</p>
-              <h3 className="text-xl md:text-2xl font-bold text-text-dark mb-2">
+              <p className="text-[11px] text-primary font-bold tracking-[0.22em] mb-1.5">ADDRESS</p>
+              <h3 className="text-xl md:text-2xl font-bold text-text-dark leading-snug">
                 대전광역시 동구 보문로 4 플러스크리닉 3층
               </h3>
-              <p className="text-base text-text-gray">구 주소: 대전광역시 동구 효동 253-1</p>
+              <p className="text-sm text-text-light mt-1.5">구 주소 · 대전광역시 동구 효동 253-1</p>
             </div>
           </div>
 
-          {/* 지도 앱 연결 버튼 */}
-          <div className="flex flex-wrap gap-3">
+          {/* 지도 앱 연결 버튼 — 통일된 알약형, 브랜드 컬러는 아이콘 칩으로만 */}
+          <div className="flex flex-wrap gap-2.5 pt-6 border-t border-gray-100">
             <a
               href="https://map.kakao.com/link/to/성모영상의학과,36.3151355,127.4400577"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#FEE500] text-[#391B1B] text-base font-semibold rounded-lg hover:brightness-95 transition-all"
+              className="group inline-flex items-center gap-2.5 py-1.5 pl-1.5 pr-5 rounded-full border border-gray-200 bg-white hover:border-primary/50 hover:shadow-sm transition-all"
             >
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 3C6.48 3 2 6.58 2 10.9c0 2.78 1.8 5.22 4.52 6.6-.2.74-.72 2.68-.82 3.1-.13.52.19.51.4.37.17-.11 2.62-1.78 3.69-2.5.7.1 1.42.15 2.16.15 5.52 0 10-3.58 10-7.9S17.52 3 12 3z" />
+              <span className="w-8 h-8 rounded-full bg-[#FEE500] flex items-center justify-center shrink-0">
+                <svg className="w-4 h-4 text-[#3A1D1D]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 3C6.48 3 2 6.58 2 10.9c0 2.78 1.8 5.22 4.52 6.6-.2.74-.72 2.68-.82 3.1-.13.52.19.51.4.37.17-.11 2.62-1.78 3.69-2.5.7.1 1.42.15 2.16.15 5.52 0 10-3.58 10-7.9S17.52 3 12 3z" />
+                </svg>
+              </span>
+              <span className="text-sm font-semibold text-text-dark">카카오맵 길찾기</span>
+              <svg className="w-3.5 h-3.5 text-text-light group-hover:text-primary group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-              카카오맵 길찾기
             </a>
             <a
               href="https://map.naver.com/p/directions/-/127.4400577,36.3151355,성모영상의학과,,PLACE_POI/-/car"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#03C75A] text-white text-base font-semibold rounded-lg hover:brightness-95 transition-all"
+              className="group inline-flex items-center gap-2.5 py-1.5 pl-1.5 pr-5 rounded-full border border-gray-200 bg-white hover:border-primary/50 hover:shadow-sm transition-all"
             >
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M16.273 12.845 7.376 0H0v24h7.727V11.156L16.624 24H24V0h-7.727z" />
+              <span className="w-8 h-8 rounded-full bg-[#03C75A] flex items-center justify-center shrink-0">
+                <svg className="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16.273 12.845 7.376 0H0v24h7.727V11.156L16.624 24H24V0h-7.727z" />
+                </svg>
+              </span>
+              <span className="text-sm font-semibold text-text-dark">네이버맵 길찾기</span>
+              <svg className="w-3.5 h-3.5 text-text-light group-hover:text-primary group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-              네이버맵 길찾기
             </a>
             <a
               href="https://www.google.com/maps/dir/?api=1&destination=대전 성모영상의학과&destination_place_id="
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-200 text-text-dark text-base font-semibold rounded-lg hover:bg-gray-50 transition-all"
+              className="group inline-flex items-center gap-2.5 py-1.5 pl-1.5 pr-5 rounded-full border border-gray-200 bg-white hover:border-primary/50 hover:shadow-sm transition-all"
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              <span className="w-8 h-8 rounded-full bg-[#EA4335] flex items-center justify-center shrink-0">
+                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </span>
+              <span className="text-sm font-semibold text-text-dark">구글맵 길찾기</span>
+              <svg className="w-3.5 h-3.5 text-text-light group-hover:text-primary group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-              구글맵 길찾기
             </a>
           </div>
         </div>

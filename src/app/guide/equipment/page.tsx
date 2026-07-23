@@ -305,7 +305,7 @@ export default function EquipmentPage() {
         <div className="mb-8">
           <h2 className="text-2xl font-bold text-text-dark mb-3">특정암 검사 장비</h2>
           <p className="text-text-gray leading-relaxed">
-            국가 5대암 검진에 사용되는 지정 장비 정보입니다.
+            국가 6대암 검진에 사용되는 지정 장비 정보입니다.
           </p>
         </div>
 
