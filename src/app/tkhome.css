@@ -1,6 +1,6 @@
 /* ============================================================
-   성모영상의학과 — 홈 (티케이병원 www.toptk.co.kr 참고 디자인)
-   · 화이트 베이스 + 메인 블루 + 브라운 포인트, 세리프 대형 타이포
+   성모영상의학과 — 홈 (티케이병원 www.toptk.co.kr 레이아웃 참고)
+   · 색상은 성모 브랜드 피치/브라운 톤 유지, 세리프 대형 타이포
    · .smx.tkx 하위로 스코프 (frame.css의 .smx 변수·container 상속)
    ============================================================ */
 .tkx{--serif:"Noto Serif KR","Noto Sans KR",serif}
@@ -23,11 +23,11 @@
 .tkx .hero .slide.on{opacity:1;visibility:visible}
 .tkx .hero .slide .bg{position:absolute;inset:0;background-position:center;background-size:cover;background-repeat:no-repeat;transform:scale(1.08)}
 .tkx .hero .slide.on .bg{transform:scale(1);transition:transform 6.5s linear}
-.tkx .hero .slide .dim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,22,38,.82) 0%,rgba(4,22,38,.52) 52%,rgba(4,22,38,.18) 100%)}
+.tkx .hero .slide .dim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(40,24,10,.84) 0%,rgba(40,24,10,.54) 52%,rgba(62,38,16,.2) 100%)}
 .tkx .hero .container{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;color:#fff}
-.tkx .hero .tag{font-size:13.5px;font-weight:600;letter-spacing:.24em;color:#a8cbe8}
+.tkx .hero .tag{font-size:13.5px;font-weight:600;letter-spacing:.24em;color:var(--c-200)}
 .tkx .hero h2{font-family:var(--serif);font-size:clamp(34px,4.8vw,58px);font-weight:600;line-height:1.3;letter-spacing:-.02em;margin-top:20px}
-.tkx .hero .hdesc{font-size:clamp(15px,1.4vw,18px);color:#d3e3f1;margin-top:22px;line-height:1.7}
+.tkx .hero .hdesc{font-size:clamp(15px,1.4vw,18px);color:#f0e2d4;margin-top:22px;line-height:1.7}
 .tkx .hero .hbtns{display:flex;gap:12px;margin-top:40px;flex-wrap:wrap}
 .tkx .hero .hbtns a{display:inline-flex;align-items:center;gap:10px;height:56px;padding:0 30px;font-size:15.5px;font-weight:700;border-radius:999px;transition:.25s var(--ease)}
 .tkx .hero .hbtns .primary{background:var(--c-500);color:#fff}
@@ -41,8 +41,8 @@
 .tkx .hero .dots{display:flex;gap:8px}
 .tkx .hero .dots button{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.38);transition:.3s var(--ease);padding:0}
 .tkx .hero .dots button.on{width:34px;border-radius:999px;background:#fff}
-.tkx .hero .count{font-size:12.5px;color:#bcd4e8;letter-spacing:.14em;font-variant-numeric:tabular-nums}
-.tkx .hero .scrolldown{position:absolute;right:40px;bottom:0;color:#cadeef;font-size:11px;letter-spacing:.26em;writing-mode:vertical-rl;display:flex;align-items:center;gap:10px}
+.tkx .hero .count{font-size:12.5px;color:#e0cdba;letter-spacing:.14em;font-variant-numeric:tabular-nums}
+.tkx .hero .scrolldown{position:absolute;right:40px;bottom:0;color:#e7d3c0;font-size:11px;letter-spacing:.26em;writing-mode:vertical-rl;display:flex;align-items:center;gap:10px}
 .tkx .hero .scrolldown::after{content:"";width:1px;height:46px;background:linear-gradient(#fff,transparent);animation:tkx-drop 1.8s infinite}
 @keyframes tkx-drop{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
@@ -57,9 +57,9 @@
 .tkx .care .head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:46px}
 .tkx .care .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .tkx .care .card{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);overflow:hidden;transition:box-shadow .3s var(--ease),transform .3s var(--ease)}
-.tkx .care .card:hover{box-shadow:0 22px 40px -22px rgba(5,44,74,.35);transform:translateY(-6px)}
+.tkx .care .card:hover{box-shadow:0 22px 40px -22px rgba(51,36,26,.35);transform:translateY(-6px)}
 .tkx .care .thumb{position:relative;aspect-ratio:4/3;background:var(--c-100);background-position:center;background-size:cover;overflow:hidden}
-.tkx .care .thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(5,44,74,0),rgba(5,44,74,.16))}
+.tkx .care .thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(51,36,26,0),rgba(51,36,26,.18))}
 .tkx .care .body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1}
 .tkx .care .eng{font-family:var(--serif);font-size:13px;color:var(--tan);letter-spacing:.06em;font-weight:600}
 .tkx .care .tit{font-size:20px;font-weight:800;color:var(--ink);margin-top:8px;letter-spacing:-.02em}
@@ -85,15 +85,17 @@
 
 /* ── 검진 프로그램 밴드 (TK Program 참고) ─────────────────────────── */
 .tkx .program{position:relative;padding:104px 0;background:
-  linear-gradient(rgba(5,30,52,.88),rgba(5,30,52,.88)),
+  linear-gradient(rgba(40,24,10,.9),rgba(40,24,10,.9)),
   url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1920&q=70&auto=format&fit=crop') center/cover fixed no-repeat,
   var(--c-900);color:#fff}
 .tkx .program .head{text-align:center;margin-bottom:52px}
 .tkx .program .sec-title{color:#fff}
+.tkx .program .sec-label{color:var(--c-200)}
 .tkx .program .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .tkx .program .item{border:1px solid rgba(255,255,255,.22);padding:30px 26px 28px;display:flex;flex-direction:column;min-height:200px;background:rgba(255,255,255,.04);backdrop-filter:blur(2px);transition:.3s var(--ease)}
 .tkx .program .item:hover{background:#fff;color:var(--ink);border-color:#fff}
-.tkx .program .eng{font-family:var(--serif);font-size:12.5px;letter-spacing:.08em;color:var(--tan);font-weight:600}
+.tkx .program .eng{font-family:var(--serif);font-size:12.5px;letter-spacing:.08em;color:var(--c-200);font-weight:600}
+.tkx .program .item:hover .eng{color:var(--tan)}
 .tkx .program .tit{font-size:19px;font-weight:800;margin-top:10px;letter-spacing:-.02em}
 .tkx .program .txt{font-size:13.5px;line-height:1.66;margin-top:10px;opacity:.78;flex:1}
 .tkx .program .more{display:inline-flex;align-items:center;gap:7px;margin-top:18px;font-size:13px;font-weight:700}
@@ -101,7 +103,7 @@
 .tkx .program .item:hover .more{color:var(--c-500)}
 
 /* ── 진료안내 · 오시는길 (Directions 참고) ─────────────────────────── */
-.tkx .visit{padding:100px 0 110px;background:#fff}
+.tkx .visit{padding:100px 0 110px;background:transparent}
 .tkx .visit .wrap{display:grid;grid-template-columns:minmax(300px,460px) 1fr;gap:48px 90px;align-items:start}
 .tkx .visit .tel-big{display:block;margin-top:34px}
 .tkx .visit .tel-big .k{font-size:13.5px;font-weight:700;color:var(--ink-2);letter-spacing:.06em}
