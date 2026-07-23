@@ -7,6 +7,8 @@ const doctors = [
     room: "제 1 진료실",
     name: "고은영",
     specialty: "내과 전문의",
+    photo: "/images/doctor-koeunyoung.jpg",
+    photoPos: "48% 38%",
     education: ["전남대학교 의과대학 졸업"],
     memberships: [
       "대한내과의학회 정회원",
@@ -21,6 +23,8 @@ const doctors = [
     name: "제은경",
     specialty: "영상의학과 전문의",
     role: "원장",
+    photo: "/images/doctor-jeeungyeong.png",
+    photoPos: "50% 28%",
     education: ["이화여자대학교 의과대학 졸업"],
     memberships: [
       "대한영상의학회 정회원",
@@ -38,6 +42,8 @@ const doctors = [
     room: "건강검진",
     name: "신정순",
     specialty: "외과 전문의",
+    photo: "/images/doctor-shinjeongsun.png",
+    photoPos: "50% 22%",
     education: ["전북대학교 의과대학 졸업"],
     memberships: [],
     fields: ["건강검진 상담 및 문진 전담"],
@@ -80,20 +86,14 @@ export default function DoctorsPage() {
               <div className="grid md:grid-cols-[320px_1fr]">
                 {/* 프로필 영역 */}
                 <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-bg-light p-8 flex flex-col items-center justify-center text-center border-b md:border-b-0 md:border-r border-gray-100">
-                  <div className="w-32 h-32 rounded-full bg-white shadow-md flex items-center justify-center mb-5 border-4 border-white">
-                    <svg
-                      className="w-16 h-16 text-primary/40"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.2}
-                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                      />
-                    </svg>
+                  <div className="w-36 h-36 rounded-full overflow-hidden shadow-md mb-5 border-4 border-white bg-white">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={doc.photo}
+                      alt={`${doc.name} ${doc.specialty}`}
+                      className="w-full h-full object-cover"
+                      style={{ objectPosition: doc.photoPos }}
+                    />
                   </div>
                   <span className="inline-block px-4 py-1 bg-primary text-white text-xs font-semibold rounded-full mb-3 tracking-wide">
                     {doc.room}

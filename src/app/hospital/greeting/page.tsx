@@ -15,22 +15,19 @@ export default function GreetingPage() {
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* 원장 사진 */}
-          <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl aspect-[3/4] flex items-center justify-center">
-            <div className="text-center text-primary/40">
-              <svg
-                className="w-20 h-20 mx-auto mb-3"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1}
-                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                />
-              </svg>
-              <p className="text-sm">원장님 사진</p>
+          <div className="relative rounded-2xl aspect-[3/4] overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/10">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/doctor-jeeungyeong.png"
+              alt="성모영상의학과 원장 제은경"
+              className="absolute inset-0 w-full h-full object-cover"
+              style={{ objectPosition: "50% 28%" }}
+            />
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent p-5">
+              <p className="text-white/80 text-xs font-semibold tracking-widest">DIRECTOR</p>
+              <p className="text-white text-lg font-bold mt-0.5">
+                제은경 <span className="text-white/80 text-sm font-medium">영상의학과 전문의</span>
+              </p>
             </div>
           </div>
 
