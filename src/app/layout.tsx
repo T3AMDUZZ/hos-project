@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./frame.css";
-import "./tkhome.css";
 import LayoutShell from "@/components/LayoutShell";
 
 export const metadata: Metadata = {
@@ -26,7 +25,7 @@ export default function RootLayout({
     <html lang="ko">
       <head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&family=Noto+Serif+KR:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
       </head>
