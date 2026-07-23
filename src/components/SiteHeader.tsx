@@ -73,10 +73,9 @@ export const MENUS = [
     title: "커뮤니티",
     slogan: "WITH YOU",
     lead: "건강한 소식을\n함께 나눕니다",
-    desc: "공지사항과 건강상식을 전해드립니다.",
+    desc: "병원 소식과 공지사항을 전해드립니다.",
     sub: [
       { title: "공지사항", href: "/community/notice" },
-      { title: "건강상식", href: "/community/health" },
     ],
   },
 ];
