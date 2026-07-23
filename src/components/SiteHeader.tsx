@@ -38,11 +38,11 @@ export const MENUS = [
     title: "건강검진",
     slogan: "HEALTH CHECKUP",
     lead: "나에게 맞는\n맞춤 건강검진",
-    desc: "종합검진부터 국가검진·5대암검진까지 폭넓게 시행합니다.",
+    desc: "종합검진부터 국가검진·6대암검진까지 폭넓게 시행합니다.",
     sub: [
       { title: "종합검진", href: "/checkup/comprehensive" },
       { title: "국민건강보험공단 검진", href: "/checkup/national" },
-      { title: "국가 5대암검진", href: "/checkup/cancer" },
+      { title: "국가 6대암검진", href: "/checkup/cancer" },
       { title: "채용검진 및 보건증", href: "/checkup/employment" },
       { title: "학생검진", href: "/checkup/student" },
     ],
