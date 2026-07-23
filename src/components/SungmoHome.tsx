@@ -12,19 +12,19 @@ const SLIDES = [
     tag: "SUNGMO RADIOLOGY CLINIC",
     title: ["정밀한 진단을 넘어,", "마음까지 살피는 진료"],
     desc: "첨단 영상장비와 전문의의 세심한 시선으로 당신의 건강을 지킵니다.",
-    img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1920&q=75&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=1920&q=75&auto=format&fit=crop",
   },
   {
     tag: "HEALTH CHECKUP CENTER",
     title: ["검진부터 진료까지,", "하나의 흐름으로"],
-    desc: "종합검진·국가검진·5대암검진을 예약부터 결과 상담까지 원스톱으로 진행합니다.",
-    img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1920&q=75&auto=format&fit=crop",
+    desc: "종합검진·국가검진·6대암검진을 예약부터 결과 상담까지 원스톱으로 진행합니다.",
+    img: "https://images.unsplash.com/photo-1638202993928-7267aad84c31?w=1920&q=75&auto=format&fit=crop",
   },
   {
     tag: "WOMEN'S CLINIC",
     title: ["여성을 위한,", "세심하고 편안한 검진"],
     desc: "여성건강검진과 여성암 검사를 전문적이고 편안한 환경에서 시행합니다.",
-    img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&q=75&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1920&q=75&auto=format&fit=crop",
   },
 ];
 
@@ -69,7 +69,7 @@ const DEPTS = [
 const PROGRAMS = [
   { eng: "Comprehensive", tit: "종합검진", txt: "A/B/C형 맞춤 구성으로 전신 건강 상태를 정밀하게 확인합니다.", href: "/checkup/comprehensive" },
   { eng: "National", tit: "국가건강검진", txt: "국민건강보험공단 일반검진을 편리하게 받아보실 수 있습니다.", href: "/checkup/national" },
-  { eng: "Cancer", tit: "국가 5대암검진", txt: "위암·대장암·간암·유방암·자궁경부암을 조기에 발견합니다.", href: "/checkup/cancer" },
+  { eng: "Cancer", tit: "국가 6대암검진", txt: "위·대장·간·유방·자궁경부암과 폐암을 조기에 발견합니다.", href: "/checkup/cancer" },
   { eng: "Employment", tit: "채용검진·보건증", txt: "채용검진과 보건증 발급을 빠르고 정확하게 진행합니다.", href: "/checkup/employment" },
 ];
 
@@ -240,7 +240,7 @@ export default function SungmoHome() {
           <div className="wrap">
             <div>
               <p className="sec-label" data-mo>Directions</p>
-              <h2 className="sec-title" data-mo>진료안내<br />· 오시는 길</h2>
+              <h2 className="sec-title" data-mo>진료안내 · 오시는 길</h2>
               <a className="tel-big" href="tel:042-274-9885" data-mo>
                 <span className="k">대표 · 검진예약</span>
                 <span className="v">042-274-9885~7</span>
